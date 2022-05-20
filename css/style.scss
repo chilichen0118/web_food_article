@@ -1,0 +1,186 @@
+$brand-gold: #ffc700;
+$brand-darkgray: #303030;
+$brand-lightgray: #fbfbfb;
+$brand-gray: #e2e2e2;
+$tablet: 1024px;
+$mobile: 767px;
+
+@font-face {
+    font-family: 'Poppins', 'Noto Sans TC';
+    src: url("/font/Poppins-Thin.woff") format("woff"),
+        url("/font/Poppins-Regular.woff") format("woff"),
+        url("/font/Poppins-Bold.woff") format("woff"),
+        url("/font/NotoSansTC-Light.woff") format("woff"),
+        url("/font/NotoSansTC-Regular.woff") format("woff"),
+        url("/font/NotoSansTC-Bold.woff") format("woff");
+
+}
+
+* {
+    font-family: 'Poppins', 'Noto Sans TC';
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none !important;
+    color: #303030;
+}
+
+// signin登入
+
+.signin-container {
+    display: grid;
+    grid-template-columns: 45% 55%;
+    height: 100vh;
+    width: 100%;
+
+    @media screen and(max-width: $mobile) {
+        grid-template-columns: 100%;
+        background-image: url(/image/signin.jpg);
+            background-position: center;
+            background-size: cover;
+    }
+
+    .signin-area {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .signin-img {
+        height: 100vh;
+        width: 100%;
+        background-image: url(/image/signin.jpg);
+        background-size: cover;
+        background-position: center;
+
+        @media screen and(max-width: $mobile) {
+            display: none;
+        }
+    }
+
+}
+
+.signin-group {
+
+    backdrop-filter: blur(10px);
+    
+    .signin-title {
+        margin-bottom: 36px;
+
+        h1 {
+            font-size: 30px;
+            letter-spacing: 3px;
+            font-weight: bold;
+        }
+    }
+
+    .form-label {
+        letter-spacing: 1px;
+
+        @media screen and(max-width: $mobile) {
+            color: #fff;
+        }
+    }
+
+    .form-control {
+        border: 1.5px solid $brand-gray;
+        background-color: $brand-lightgray;
+
+        &::placeholder {
+            color: $brand-gray;
+            font-size: 14px;
+            letter-spacing: 1px;
+        }
+    }
+
+    .form-control:focus {
+        box-shadow: 0 0 6px rgb(255, 200, 0);
+        caret-color: $brand-gold;
+
+        &:focus {
+            border-color: $brand-gold;
+            border-width: 1px;
+        }
+    }
+
+    .signin-btn {
+        background-color: $brand-gold;
+        padding: 10px;
+        margin-top: 10px;
+        color: #fff;
+        letter-spacing: 3px;
+        box-shadow: 1px 1px 5px 1px $brand-gray;
+        border: 1.5px solid $brand-gold;
+        transition: all 0.5s;
+
+        &:hover {
+            color: $brand-gold;
+            background-color: transparent;
+        }
+
+        @media screen and(max-width: $mobile) {
+            box-shadow: none;
+        }
+    }
+
+    .signin-subtitle {
+
+        span {
+            @media screen and(max-width: $mobile) {
+                color: $brand-lightgray;
+            }
+        }
+    }
+
+    .s-link {
+        color: $brand-gold;
+        font-size: 14px;
+        letter-spacing: 1px;
+        font-weight: 300;
+    }
+
+    .line {
+        flex: 1 1 0%;
+        border-bottom: 1px solid $brand-gray;
+    }
+
+    .other-signin {
+        flex-basis: 50%;
+        padding: 3px;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+            transform: translateY(-2px);
+        }
+    }
+
+    .other-account {
+        width: 100%;
+        border: 1.5px solid $brand-gold;
+
+        .o-s-img {
+            margin-right: 10px;
+
+            svg {
+                fill: $brand-darkgray;
+                height: 20px;
+                width: 20px;
+
+                @media screen and(max-width: $mobile) {
+                    fill: #fff;
+                }
+            }
+        }
+
+        .o-s-text {
+            span {
+                color: $brand-gold;
+                font-weight: 500;
+                letter-spacing: 1px;
+            }
+        }
+    }
+}
+
+.terms-policy {
+    font-size: 14px;
+}

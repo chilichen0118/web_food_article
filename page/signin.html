@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>食在心路</title>
+
+    <!-- bootstrap 5.1.1 -->
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <!-- 食在心路樣式 -->
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+    <div class="signin-container">
+        <div class="signin-container signin-img signin-area">
+        </div>
+        <div class="signin-group signin-area">
+            <div class="container">
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-md-6">
+                        <form>
+                            <div class="signin-title">
+                                <h1 class="text-center">美食饕客登入</h1>
+                            </div>
+                            <div class="my-2 p-2 signin-content">
+                                <label for="signinEmail" class="form-label">電子信箱：</label>
+                                <input type="email" class="form-control" id="signinEmail" placeholder="電子信箱">
+                            </div>
+                            <div class="my-2 p-2 signin-content">
+                                <label for="signinPassword" class="form-label">密碼：</label>
+                                <input type="password" id="signinPassword" class="form-control p-2">
+                            </div>
+                            <!-- 登入按鈕 -->
+                            <div class="my-2 p-2">
+                                <button type="submit" class="w-100 btn signin-btn text-center">登入</button>
+                            </div>
+
+                            <div class="mt-2 mb-5 d-flex justify-content-between p-2">
+                                <a href=""><span class="s-link">我是新朋友</span></a>
+                                <a href=""><span class="s-link">忘記密碼?別擔心，點此找幫手！</span></a>
+                            </div>
+                            <div class="my-2 d-flex justify-content-center align-items-center">
+                                <div class="line w-100"></div>
+                                <div class="signin-subtitle mx-3">
+                                    <span>或使用以下方式登入</span>
+                                </div>
+                                <div class="line w-100"></div>
+                            </div>
+                            <!-- Google & facebook account -->
+                            <div class="my-3 d-flex justify-content-center align-items-center">
+                                <!-- google account -->
+                                <div class="other-signin">
+                                    <button class="other-account w-100 btn p-2">
+                                        <div class="o-s-btn d-flex justify-content-center align-items-center">
+                                            <div class="o-s-img">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon"
+                                                    viewBox="0 0 512 512">
+                                                    <title>Logo Google</title>
+                                                    <path
+                                                        d="M473.16 221.48l-2.26-9.59H262.46v88.22H387c-12.93 61.4-72.93 93.72-121.94 93.72-35.66 0-73.25-15-98.13-39.11a140.08 140.08 0 01-41.8-98.88c0-37.16 16.7-74.33 41-98.78s61-38.13 97.49-38.13c41.79 0 71.74 22.19 82.94 32.31l62.69-62.36C390.86 72.72 340.34 32 261.6 32c-60.75 0-119 23.27-161.58 65.71C58 139.5 36.25 199.93 36.25 256s20.58 113.48 61.3 155.6c43.51 44.92 105.13 68.4 168.58 68.4 57.73 0 112.45-22.62 151.45-63.66 38.34-40.4 58.17-96.3 58.17-154.9 0-24.67-2.48-39.32-2.59-39.96z" />
+                                                </svg>
+                                            </div>
+                                            <div class="o-s-text">
+                                                <span>Google</span>
+                                            </div>
+                                        </div>
+                                    </button>
+                                </div>
+                                <!-- facebook account -->
+                                <div class="other-signin">
+                                    <button class="other-account w-100 btn p-2">
+                                        <div class="o-s-btn d-flex justify-content-center align-items-center">
+                                            <div class="o-s-img">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon"
+                                                    viewBox="0 0 512 512">
+                                                    <title>Logo Facebook</title>
+                                                    <path
+                                                        d="M480 257.35c0-123.7-100.3-224-224-224s-224 100.3-224 224c0 111.8 81.9 204.47 189 221.29V322.12h-56.89v-64.77H221V208c0-56.13 33.45-87.16 84.61-87.16 24.51 0 50.15 4.38 50.15 4.38v55.13H327.5c-27.81 0-36.51 17.26-36.51 35v42h62.12l-9.92 64.77H291v156.54c107.1-16.81 189-109.48 189-221.31z"
+                                                        fill-rule="evenodd" />
+                                                </svg>
+                                            </div>
+                                            <div class="o-s-text">
+                                                <span>Facebook</span>
+                                            </div>
+                                        </div>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- 服務條款&隱私權政策 -->
+                            <div class="my-5 text-center terms-policy">
+                                <span>點擊登錄即代表我同意食在心路的</span>
+                                <a href=""><span class="s-link">服務條款</span></a>
+                                <span>和</span>
+                                <a href=""><span class="s-link">隱私權政策</span></a>
+                                <span>。</span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="./js/jquery-3.6.0.js"></script>
+    <script src="./js/bootstrap.bundle.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
