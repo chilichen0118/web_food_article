@@ -70,6 +70,10 @@ $mobile: 767px;
             font-size: 30px;
             letter-spacing: 3px;
             font-weight: bold;
+
+            @media screen and(max-width: $mobile) {
+                color: #fff;
+            }
         }
     }
 
@@ -136,6 +140,30 @@ $mobile: 767px;
         font-size: 14px;
         letter-spacing: 1px;
         font-weight: 300;
+        display: inline-block;
+        position: relative;
+
+        &::after {
+            content: '';
+            width: 100%;
+            height: 1.5px;
+            background-color: $brand-gold;
+            border-radius: 5px;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: 0.2s ease;
+        }
+
+        &:hover::after {
+            transform: scaleX(1);
+
+            @media screen and(max-width: $mobile) {
+                display: none;
+            }
+        }
     }
 
     .line {
@@ -182,5 +210,9 @@ $mobile: 767px;
 }
 
 .terms-policy {
-    font-size: 14px;
+    font-size: 12px;
+
+    .t-p-link {
+        font-size: 12px;
+    }
 }

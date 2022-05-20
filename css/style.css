@@ -72,6 +72,12 @@
   font-weight: bold;
 }
 
+@media screen and (max-width: 767px) {
+  .signin-group .signin-title h1 {
+    color: #fff;
+  }
+}
+
 .signin-group .form-label {
   letter-spacing: 1px;
 }
@@ -158,6 +164,36 @@
   font-size: 14px;
   letter-spacing: 1px;
   font-weight: 300;
+  display: inline-block;
+  position: relative;
+}
+
+.signin-group .s-link::after {
+  content: '';
+  width: 100%;
+  height: 1.5px;
+  background-color: #ffc700;
+  border-radius: 5px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+
+.signin-group .s-link:hover::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+@media screen and (max-width: 767px) {
+  .signin-group .s-link:hover::after {
+    display: none;
+  }
 }
 
 .signin-group .line {
@@ -208,6 +244,10 @@
 }
 
 .terms-policy {
-  font-size: 14px;
+  font-size: 12px;
+}
+
+.terms-policy .t-p-link {
+  font-size: 12px;
 }
 /*# sourceMappingURL=style.css.map */
