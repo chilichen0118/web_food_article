@@ -1,0 +1,26 @@
+$brand-gold: #ffc700;
+$brand-darkgray: #303030;
+$brand-lightgray: #fbfbfb;
+$brand-gray: #e2e2e2;
+$tablet: 1024px;
+$mobile: 767px;
+
+@font-face {
+    font-family: 'Poppins', 'Noto Sans TC';
+    src: url("/font/Poppins-Thin.woff") format("woff"),
+        url("/font/Poppins-Regular.woff") format("woff"),
+        url("/font/Poppins-Bold.woff") format("woff"),
+        url("/font/NotoSansTC-Light.woff") format("woff"),
+        url("/font/NotoSansTC-Regular.woff") format("woff"),
+        url("/font/NotoSansTC-Bold.woff") format("woff");
+
+}
+
+* {
+    font-family: 'Poppins', 'Noto Sans TC';
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none !important;
+    color: #303030;
+}
+

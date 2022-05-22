@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>食在心路 | 註冊</title>
+
+    <!-- bootstrap 5.1.1 -->
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <!-- 食在心路整體樣式 -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- 食在心路註冊頁面樣式 -->
+    <link rel="stylesheet" href="/css/signup.css">
+</head>
+
+<body>
+
+    <div class="signup-container">
+        <div class="signup-container signup-img signup-area">
+        </div>
+        <div class="signup-group signup-area">
+            <div class="container">
+                <div class="row justify-content-center align-items-center">
+                    <div class="col-md-6">
+                        <form>
+                            <div class="signup-title">
+                                <h1 class="text-center">免費加入</h1>
+                            </div>
+                            <!-- 美食饕客 or 餐廳夥伴 -->
+                            <div class="signup-status">
+                                <!-- 美食饕客 -->
+                                <div class="signup-status-btn">
+                                    <button class="btn status-gourmet">
+                                        <div class="s-g-btn">
+                                            <div class="status-img">
+                                                <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg"
+                                                    fill-rule="evenodd" clip-rule="evenodd">
+                                                    <path
+                                                        d="M3.278 3.956c-.459 0-.883.211-1.103.552-.363.561-.218 1.315.352 1.832.383.346.888.546 1.385.546.581 0 1.093-.268 1.444-.755l3.208-4.373-.502-.366-2.928 3.966-.4-.557c-.39-.546-.908-.845-1.456-.845m.634 3.928c-.743 0-1.492-.293-2.056-.804-.578-.525-.883-1.211-.883-1.891 0-1.62 1.426-2.232 2.305-2.232.675 0 1.308.265 1.829.756l2.742-3.713 2.112 1.541-3.797 5.177c-.542.751-1.342 1.166-2.252 1.166m15.386-7.839l-1.2 2.215-2.476.455 1.735 1.825-.332 2.496 2.273-1.086 2.271 1.086-.331-2.496 1.735-1.825-2.476-.455-1.199-2.215zm0 2.098l.548 1.013 1.132.208-.793.834.152 1.142-1.039-.496-1.039.496.152-1.142-.794-.834 1.132-.208.549-1.013m-7.312 3.894c-2.48 0-4.494 2.014-4.494 4.494 0 2.482 2.014 4.494 4.494 4.494 2.481 0 4.495-2.012 4.495-4.494 0-2.48-2.014-4.494-4.495-4.494m0 .999c1.928 0 3.496 1.569 3.496 3.495 0 1.927-1.568 3.495-3.496 3.495-1.927 0-3.495-1.568-3.495-3.495 0-1.926 1.568-3.495 3.495-3.495m-4.983 15.965h9.974v-2.778c0-1.256.204-1.786.661-2.494l1.024-1.58c1.148-1.764 2.233-3.43 2.792-4.491.078-.148.03-.328-.112-.418-.168-.109-.403-.076-.536.07-.671.734-2.03 2.164-4.041 4.251l-.369.396c-.951 1.04-1.53 1.54-4.287 1.54h-.123c-2.859-.014-3.442-.515-4.391-1.554l-.356-.382c-1.999-2.074-3.359-3.504-4.042-4.251-.133-.146-.368-.177-.535-.07-.142.091-.189.271-.112.418.585 1.112 1.828 3.18 3.796 6.323.479.766.657 1.44.657 2.489v2.531zm10.973.999h-11.972v-3.53c0-.851-.132-1.363-.504-1.958-2.01-3.208-3.228-5.239-3.833-6.388-.321-.611-.126-1.352.455-1.725.565-.361 1.361-.258 1.812.236.668.731 2.059 2.195 4.024 4.233l.374.402c.786.86 1.111 1.216 3.659 1.228h.118c2.439 0 2.764-.355 3.55-1.215l.387-.415c2.005-2.08 3.358-3.504 4.024-4.232.452-.495 1.249-.598 1.811-.237.582.373.777 1.114.457 1.725-.582 1.101-1.677 2.786-2.839 4.57l-1.022 1.576c-.348.541-.501.889-.501 1.953v3.777z" />
+                                                </svg>
+                                            </div>
+                                            <div class="status-text">
+                                                <span>美食饕客</span>
+                                            </div>
+                                        </div>
+                                    </button>
+                                </div>
+                                <!-- 餐廳夥伴 -->
+                                <div class="signup-status">
+                                    <div class="signup-status-btn">
+                                        <button class="btn status-gourmet">
+                                            <div class="s-g-btn">
+                                                <div class="status-img">
+                                                    <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg"
+                                                        fill-rule="evenodd" clip-rule="evenodd">
+                                                        <path
+                                                            d="M20 15.628c0-.713-.154-1.919-1.191-1.98-.493-.03-.89-.414-.936-.904-.055-.581-.186-1.184-.476-1.744h-10.793c-.29.56-.421 1.163-.476 1.743-.046.49-.443.874-.936.904-1.037.062-1.192 1.268-1.192 1.981 0 .316.333 1.613 1.331 1.963.284.1.508.322.61.605.966 2.694 3.628 4.804 6.059 4.804 2.552 0 5.195-2.499 6.063-4.834.108-.29.344-.515.641-.606 1.07-.332 1.296-1.68 1.296-1.932zm-13-7.229v1.601h3v-1.5c0-.276.224-.5.5-.5s.5.224.5.5v1.5h2v-1.5c0-.276.225-.5.5-.5s.5.224.5.5v1.5h3v-1.647c.244-.058 3-.439 3-3.068 0-1.994-1.753-3.58-3.875-3.58-.806 0-1.278.198-1.941.428-1.137-1.123-1.63-1.133-2.184-1.133-.482 0-1.038.002-2.184 1.133-.68-.235-1.134-.428-1.941-.428-2.122 0-3.875 1.586-3.875 3.58 0 2.456 2.662 3.013 3 3.114zm14 7.229c0 .67-.453 2.407-2 2.887-1.023 2.754-3.999 5.485-7 5.485s-5.957-2.557-7-5.466c-1.52-.532-2-2.301-2-2.906 0-1.509.603-2.888 2.132-2.979.098-1.038.412-1.855.868-2.528v-.977c-1.825-.546-3-2.239-3-3.859 0-2.528 2.185-4.58 4.875-4.58.591 0 1.157.099 1.681.28.615-.607 1.483-.985 2.444-.985.961 0 1.828.378 2.443.985.525-.181 1.091-.28 1.682-.28 2.69 0 4.875 2.052 4.875 4.58 0 1.62-1.229 3.442-3 3.859v.976c.456.675.771 1.492.868 2.529 1.527.091 2.132 1.462 2.132 2.979zm-9 1.688c-1.9-1.287-1.351 1.854-4 .566.4 1.78 2.805 2.082 4 1.009 1.195 1.073 3.6.771 4-1.009-2.648 1.289-2.1-1.852-4-.566zm3-4.316c-.552 0-1 .525-1 1.174 0 .647.448 1.174 1 1.174s1-.527 1-1.174c0-.649-.448-1.174-1-1.174zm-5 1.174c0 .647-.448 1.174-1 1.174s-1-.527-1-1.174c0-.649.448-1.174 1-1.174s1 .525 1 1.174z" />
+                                                    </svg>
+                                                </div>
+                                                <div class="status-text">
+                                                    <span>餐廳夥伴</span>
+                                                </div>
+                                            </div>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="my-2 p-2 signup-content">
+                                <label for="signupEmail" class="form-label">電子信箱：</label>
+                                <input type="email" class="form-control" id="signupEmail" placeholder="電子信箱">
+                            </div>
+                            <div class="my-2 p-2 signup-content">
+                                <label for="signupPassword" class="form-label">密碼：</label>
+                                <input type="password" id="signupPassword" class="form-control p-2">
+                            </div>
+                            <div class="my-2 p-2 signup-content">
+                                <label for="confirmPassword" class="form-label">確認密碼：</label>
+                                <input type="password" id="confirmPassword" class="form-control p-2">
+                            </div>
+                            <div class="my-2 p-2 d-flex justify-content-center align-items-center">
+                                <div class="my-2 p-2 signup-content">
+                                    <label for="userName" class="form-label">暱稱：</label>
+                                    <input type="password" id="userName" class="form-control p-2">
+                                </div>
+                                <div class="my-2 p-2 signup-content">
+                                    <label for="userBirthday" class="form-label">生日：</label>
+                                    <input type="date" id="userBirthday" class="form-control p-2">
+                                </div>
+                            </div>
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input form-checkbox" id="exampleCheck1">
+                                <label class="form-check-label"
+                                    for="exampleCheck1">我想要收到食在心路的獨家好康情報，同時根據隱私權政策，我保留隨時取消訂閱的權利。</label>
+                            </div>
+                            <!-- 我不是機器人 -->
+                            <div class="w-100"></div>
+                            <!-- 註冊按鈕 -->
+                            <div class="my-2 p-2">
+                                <button type="submit" class="w-100 btn signup-btn text-center">免費加入</button>
+                            </div>
+                            <div class="my-2 d-flex justify-content-center align-items-center">
+                                <div class="line w-100"></div>
+                                <div class="signin-subtitle mx-3">
+                                    <span>或使用以下方式登入</span>
+                                </div>
+                                <div class="line w-100"></div>
+                            </div>
+                            <!-- Google & facebook account -->
+                            <div class="my-3 d-flex justify-content-center align-items-center">
+                                <!-- google account -->
+                                <div class="other-signin">
+                                    <button class="other-account w-100 btn p-2">
+                                        <div class="o-s-btn d-flex justify-content-center align-items-center">
+                                            <div class="o-s-img">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon"
+                                                    viewBox="0 0 512 512">
+                                                    <title>Logo Google</title>
+                                                    <path
+                                                        d="M473.16 221.48l-2.26-9.59H262.46v88.22H387c-12.93 61.4-72.93 93.72-121.94 93.72-35.66 0-73.25-15-98.13-39.11a140.08 140.08 0 01-41.8-98.88c0-37.16 16.7-74.33 41-98.78s61-38.13 97.49-38.13c41.79 0 71.74 22.19 82.94 32.31l62.69-62.36C390.86 72.72 340.34 32 261.6 32c-60.75 0-119 23.27-161.58 65.71C58 139.5 36.25 199.93 36.25 256s20.58 113.48 61.3 155.6c43.51 44.92 105.13 68.4 168.58 68.4 57.73 0 112.45-22.62 151.45-63.66 38.34-40.4 58.17-96.3 58.17-154.9 0-24.67-2.48-39.32-2.59-39.96z" />
+                                                </svg>
+                                            </div>
+                                            <div class="o-s-text">
+                                                <span>Google</span>
+                                            </div>
+                                        </div>
+                                    </button>
+                                </div>
+                                <!-- facebook account -->
+                                <div class="other-signin">
+                                    <button class="other-account w-100 btn p-2">
+                                        <div class="o-s-btn d-flex justify-content-center align-items-center">
+                                            <div class="o-s-img">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="ionicon"
+                                                    viewBox="0 0 512 512">
+                                                    <title>Logo Facebook</title>
+                                                    <path
+                                                        d="M480 257.35c0-123.7-100.3-224-224-224s-224 100.3-224 224c0 111.8 81.9 204.47 189 221.29V322.12h-56.89v-64.77H221V208c0-56.13 33.45-87.16 84.61-87.16 24.51 0 50.15 4.38 50.15 4.38v55.13H327.5c-27.81 0-36.51 17.26-36.51 35v42h62.12l-9.92 64.77H291v156.54c107.1-16.81 189-109.48 189-221.31z"
+                                                        fill-rule="evenodd" />
+                                                </svg>
+                                            </div>
+                                            <div class="o-s-text">
+                                                <span>Facebook</span>
+                                            </div>
+                                        </div>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- 服務條款&隱私權政策 -->
+                            <div class="my-5 text-center terms-policy">
+                                <span>點擊登錄即代表我同意食在心路的</span>
+                                <a href=""><span class="s-link t-p-link">服務條款</span></a>
+                                <span>和</span>
+                                <a href=""><span class="s-link t-p-link">隱私權政策</span></a>
+                                <span>。</span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="/js/jquery-3.6.0.js"></script>
+    <script src="/js/bootstrap.bundle.js"></script>
+    <script src="/js/main.js"></script>
+</body>
+
+</html>

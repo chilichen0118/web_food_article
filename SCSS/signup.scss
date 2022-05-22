@@ -5,28 +5,9 @@ $brand-gray: #e2e2e2;
 $tablet: 1024px;
 $mobile: 767px;
 
-@font-face {
-    font-family: 'Poppins', 'Noto Sans TC';
-    src: url("/font/Poppins-Thin.woff") format("woff"),
-        url("/font/Poppins-Regular.woff") format("woff"),
-        url("/font/Poppins-Bold.woff") format("woff"),
-        url("/font/NotoSansTC-Light.woff") format("woff"),
-        url("/font/NotoSansTC-Regular.woff") format("woff"),
-        url("/font/NotoSansTC-Bold.woff") format("woff");
+// signup註冊
 
-}
-
-* {
-    font-family: 'Poppins', 'Noto Sans TC';
-    margin: 0;
-    box-sizing: border-box;
-    text-decoration: none !important;
-    color: #303030;
-}
-
-// signin登入
-
-.signin-container {
+.signup-container {
     display: grid;
     grid-template-columns: 45% 55%;
     height: 100vh;
@@ -34,21 +15,21 @@ $mobile: 767px;
 
     @media screen and(max-width: $mobile) {
         grid-template-columns: 100%;
-        background-image: url(/image/signin.jpg);
-            background-position: center;
-            background-size: cover;
+        background-image: url(/image/signup.jpg);
+        background-position: center;
+        background-size: cover;
     }
 
-    .signin-area {
+    .signup-area {
         display: flex;
         justify-content: center;
         align-items: center;
     }
 
-    .signin-img {
+    .signup-img {
         height: 100vh;
         width: 100%;
-        background-image: url(/image/signin.jpg);
+        background-image: url(/image/signup.jpg);
         background-size: cover;
         background-position: center;
 
@@ -59,11 +40,11 @@ $mobile: 767px;
 
 }
 
-.signin-group {
+.signup-group {
 
     backdrop-filter: blur(10px);
-    
-    .signin-title {
+
+    .signup-title {
         margin-bottom: 36px;
 
         h1 {
@@ -106,7 +87,23 @@ $mobile: 767px;
         }
     }
 
-    .signin-btn {
+    .form-check-input {
+        border: 1px solid $brand-gray;
+
+        &:focus {
+            box-shadow: 0 0 6px rgb(255, 200, 0);
+            border-color: $brand-gold;
+        }
+
+    }
+
+    .form-check-input[type=checkbox]:indeterminate {
+        border-color: $brand-gold;
+        background-color: $brand-gold;
+
+    }
+
+    .signup-btn {
         background-color: $brand-gold;
         padding: 10px;
         margin-top: 10px;
