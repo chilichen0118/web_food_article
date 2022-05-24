@@ -3,7 +3,7 @@
   display: grid;
   -ms-grid-columns: 45% 55%;
       grid-template-columns: 45% 55%;
-  height: 100vh;
+  height: 100%;
   width: 100%;
 }
 
@@ -15,6 +15,10 @@
     background-position: center;
     background-size: cover;
   }
+}
+
+.signup-container .s-g-style {
+  border: 7px solid #ffc700;
 }
 
 .signup-container .signup-area {
@@ -30,7 +34,7 @@
 }
 
 .signup-container .signup-img {
-  height: 100vh;
+  height: 100%;
   width: 100%;
   background-image: url(/image/signup.jpg);
   background-size: cover;
@@ -43,6 +47,10 @@
   }
 }
 
+.signup-container .status-text span {
+  letter-spacing: 1px;
+}
+
 .signup-group {
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
@@ -50,6 +58,7 @@
 
 .signup-group .signup-title {
   margin-bottom: 36px;
+  padding-top: 20px;
 }
 
 .signup-group .signup-title h1 {
@@ -62,6 +71,53 @@
   .signup-group .signup-title h1 {
     color: #fff;
   }
+}
+
+.signup-group .signup-status-btn {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  padding: 30px;
+  max-width: 50%;
+}
+
+@media screen and (max-width: 767px) {
+  .signup-group .signup-status-btn {
+    padding: 10px;
+  }
+}
+
+.signup-group .signup-status-btn .status-gourmet {
+  -webkit-box-shadow: 1px 1px 5px 1px #e2e2e2;
+          box-shadow: 1px 1px 5px 1px #e2e2e2;
+  border-radius: 10%;
+  background-color: #fff;
+}
+
+@media screen and (max-width: 767px) {
+  .signup-group .signup-status-btn .status-gourmet {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+}
+
+.signup-group .signup-status-btn .status-gourmet .s-g-btn {
+  padding: 20px;
+}
+
+@media screen and (max-width: 767px) {
+  .signup-group .signup-status-btn .status-gourmet .s-g-btn {
+    padding: 10px;
+  }
+}
+
+.signup-group .signup-status-btn .status-gourmet .s-g-btn .status-img {
+  margin-bottom: 10px;
+}
+
+.signup-group .signup-status-btn .status-gourmet .s-g-btn .status-img svg {
+  height: 50px;
+  width: 50px;
+  fill: #303030;
 }
 
 .signup-group .form-label {
@@ -114,17 +170,31 @@
   border-width: 1px;
 }
 
-.signup-group .form-check-input {
-  border: 1px solid #e2e2e2;
+.signup-group .signup-information {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
 }
 
-.signup-group .form-check-input:focus {
+.signup-group .signup-information input {
+  letter-spacing: 1px;
+}
+
+.signup-group .form-check {
+  padding: 0;
+}
+
+.signup-group .form-check .form-check-input {
+  border: 1px solid #e2e2e2;
+  width: 20px;
+}
+
+.signup-group .form-check .form-check-input:focus {
   -webkit-box-shadow: 0 0 6px #ffc800;
           box-shadow: 0 0 6px #ffc800;
   border-color: #ffc700;
 }
 
-.signup-group .form-check-input[type=checkbox]:indeterminate {
+.signup-group .form-check .form-check-input[type=checkbox]:indeterminate {
   border-color: #ffc700;
   background-color: #ffc700;
 }

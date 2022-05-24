@@ -10,7 +10,7 @@ $mobile: 767px;
 .signup-container {
     display: grid;
     grid-template-columns: 45% 55%;
-    height: 100vh;
+    height: 100%;
     width: 100%;
 
     @media screen and(max-width: $mobile) {
@@ -18,6 +18,10 @@ $mobile: 767px;
         background-image: url(/image/signup.jpg);
         background-position: center;
         background-size: cover;
+    }
+    
+    .s-g-style {
+        border: 7px solid $brand-gold;
     }
 
     .signup-area {
@@ -27,7 +31,7 @@ $mobile: 767px;
     }
 
     .signup-img {
-        height: 100vh;
+        height: 100%;
         width: 100%;
         background-image: url(/image/signup.jpg);
         background-size: cover;
@@ -38,14 +42,23 @@ $mobile: 767px;
         }
     }
 
+    .status-text {
+        span {
+            letter-spacing: 1px;
+        }
+    }
+
 }
 
 .signup-group {
-
+    
     backdrop-filter: blur(10px);
 
     .signup-title {
         margin-bottom: 36px;
+        padding-top: 20px;
+
+        
 
         h1 {
             font-size: 30px;
@@ -54,6 +67,45 @@ $mobile: 767px;
 
             @media screen and(max-width: $mobile) {
                 color: #fff;
+            }
+        }
+    }
+
+    .signup-status-btn {
+        flex-basis: 50%;
+        padding: 30px;
+        max-width: 50%;
+
+        @media screen and(max-width: $mobile) {
+            padding: 10px;
+        }
+
+        .status-gourmet {
+            box-shadow: 1px 1px 5px 1px $brand-gray;
+            border-radius: 10%;
+            background-color: #fff;
+
+            @media screen and(max-width: $mobile) {
+                box-shadow: none;
+            }
+
+            .s-g-btn {
+                padding: 20px;
+
+                @media screen and(max-width: $mobile) {
+                    padding: 10px;
+                }
+
+
+                .status-img {
+                    margin-bottom: 10px;
+
+                    svg {
+                        height: 50px;
+                        width: 50px;
+                        fill: $brand-darkgray;
+                    }
+                }
             }
         }
     }
@@ -87,20 +139,34 @@ $mobile: 767px;
         }
     }
 
-    .form-check-input {
-        border: 1px solid $brand-gray;
+    .signup-information {
+        flex-basis: 50%;
 
-        &:focus {
-            box-shadow: 0 0 6px rgb(255, 200, 0);
-            border-color: $brand-gold;
+        input {
+            letter-spacing: 1px;
         }
-
     }
 
-    .form-check-input[type=checkbox]:indeterminate {
-        border-color: $brand-gold;
-        background-color: $brand-gold;
+    .form-check {
+        padding: 0;
 
+        .form-check-input {
+            border: 1px solid $brand-gray;
+            width: 20px;
+    
+            &:focus {
+                box-shadow: 0 0 6px rgb(255, 200, 0);
+                border-color: $brand-gold;
+            }
+    
+        }
+    
+        .form-check-input[type=checkbox]:indeterminate {
+            border-color: $brand-gold;
+            background-color: $brand-gold;
+    
+        }
+        
     }
 
     .signup-btn {
