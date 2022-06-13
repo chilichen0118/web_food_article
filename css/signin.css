@@ -140,6 +140,10 @@
   }
 }
 
+.signin-group .signin-subtitle span {
+  font-size: 14px;
+}
+
 @media screen and (max-width: 767px) {
   .signin-group .signin-subtitle span {
     color: #fbfbfb;

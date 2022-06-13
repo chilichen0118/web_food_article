@@ -19,10 +19,6 @@ $mobile: 767px;
         background-position: center;
         background-size: cover;
     }
-    
-    .s-g-style {
-        border: 7px solid $brand-gold;
-    }
 
     .signup-area {
         display: flex;
@@ -41,24 +37,15 @@ $mobile: 767px;
             display: none;
         }
     }
-
-    .status-text {
-        span {
-            letter-spacing: 1px;
-        }
-    }
-
 }
 
 .signup-group {
-    
+
     backdrop-filter: blur(10px);
 
     .signup-title {
         margin-bottom: 36px;
         padding-top: 20px;
-
-        
 
         h1 {
             font-size: 30px;
@@ -71,44 +58,110 @@ $mobile: 767px;
         }
     }
 
-    .signup-status-btn {
-        flex-basis: 50%;
-        padding: 30px;
-        max-width: 50%;
+    // 饕客 or 餐廳 按鈕
 
-        @media screen and(max-width: $mobile) {
-            padding: 10px;
-        }
+    .signup-status {
+        text-align: center;
+        box-sizing: border-box;
 
-        .status-gourmet {
-            box-shadow: 1px 1px 5px 1px $brand-gray;
-            border-radius: 10%;
-            background-color: #fff;
+        .signup-status-btn {
+            flex-basis: 50%;
+            max-width: 100%;
+            padding: 8px;
+            cursor: default;
 
-            @media screen and(max-width: $mobile) {
-                box-shadow: none;
-            }
+            input[type=radio] {
+                display: none;
 
-            .s-g-btn {
-                padding: 20px;
-
-                @media screen and(max-width: $mobile) {
-                    padding: 10px;
-                }
-
-
-                .status-img {
-                    margin-bottom: 10px;
+                &:checked+.s-b-area {
+                    border: 3px solid $brand-gold;
+                    box-shadow: 1px 1px 10px 1px $brand-gold;
+                    cursor: pointer;
+                    box-sizing: border-box;
 
                     svg {
-                        height: 50px;
-                        width: 50px;
-                        fill: $brand-darkgray;
+                        fill: $brand-gold;
                     }
                 }
             }
+
+            .s-b-area {
+                width: 100%;
+                padding: 10px 8px;
+                border: 1px solid $brand-lightgray;
+                border-radius: 10px;
+                box-shadow: 1px 1px 10px 1px $brand-gray;
+                cursor: pointer;
+                transition:  0.3s ease-in-out alternate;
+
+                &:hover {
+                    transform: translateY(-2px);
+                }
+
+                .s-b-img {
+                    width: 100%;
+
+                    svg {
+                        width: 60px;
+                        height: 60px;
+                        fill: $brand-gray;
+                    }
+                }
+
+                .s-b-title {
+                    letter-spacing: 1px;
+                    font-weight: 500;
+                    font-size: 14px;
+                }
+            }
+
+            // .status-gourmet {
+            //     box-shadow: 1px 1px 10px 1px $brand-gray;
+            //     border-radius: 10%;
+            //     background-color: #fff;
+
+            //     @media screen and(max-width: $mobile) {
+            //         box-shadow: none;
+            //     }
+
+            //     .s-g-btn {
+            //         padding: 10px 15px;
+
+            //         @media screen and(max-width: $mobile) {
+            //             padding: 10px;
+            //         }
+
+
+            //         .status-img {
+            //             margin-bottom: 10px;
+
+            //             svg {
+            //                 height: 64px;
+            //                 width: 64px;
+            //                 fill: $brand-gray;
+            //             }
+            //         }
+
+            //         .status-text {
+            //             .status-text-title {
+            //                 letter-spacing: 1px;
+            //                 font-weight: 500;
+            //             }
+            //         }
+            //     }
+            // }
         }
     }
+
+    // 預設美食饕客樣式
+
+    // .s-g-style {
+    //     border: 7px solid $brand-gold;
+
+    //     svg {
+    //         fill: $brand-gold  !important;
+    //     }
+    // }
 
     .form-label {
         letter-spacing: 1px;
@@ -141,6 +194,8 @@ $mobile: 767px;
 
     .signup-information {
         flex-basis: 50%;
+        max-width: 50%;
+        padding: 15px;
 
         input {
             letter-spacing: 1px;
@@ -148,31 +203,44 @@ $mobile: 767px;
     }
 
     .form-check {
-        padding: 0;
 
         .form-check-input {
             border: 1px solid $brand-gray;
-            width: 20px;
-    
+            margin-right: 3px;
+            padding: 6px;
+
             &:focus {
                 box-shadow: 0 0 6px rgb(255, 200, 0);
                 border-color: $brand-gold;
             }
-    
+
         }
-    
+
         .form-check-input[type=checkbox]:indeterminate {
             border-color: $brand-gold;
             background-color: $brand-gold;
-    
+
         }
-        
+
+        .form-check-label {
+            span {
+                letter-spacing: 1px;
+                padding-top: 2px;
+                font-size: 14px;
+
+                @media screen and(max-width: $mobile) {
+                    color: #fff;
+                    font-size: 14px;
+                }
+            }
+        }
+
     }
 
     .signup-btn {
         background-color: $brand-gold;
         padding: 10px;
-        margin-top: 10px;
+        // margin-top: 10px;
         color: #fff;
         letter-spacing: 3px;
         box-shadow: 1px 1px 5px 1px $brand-gray;
@@ -182,6 +250,10 @@ $mobile: 767px;
         &:hover {
             color: $brand-gold;
             background-color: transparent;
+
+            @media screen and(max-width: $mobile) {
+                color: #fff;
+            }
         }
 
         @media screen and(max-width: $mobile) {
@@ -192,6 +264,8 @@ $mobile: 767px;
     .signin-subtitle {
 
         span {
+            font-size: 14px;
+
             @media screen and(max-width: $mobile) {
                 color: $brand-lightgray;
             }
@@ -271,6 +345,20 @@ $mobile: 767px;
         }
     }
 }
+
+.signin-btn {
+    border: 1.5px solid $brand-gold;
+    letter-spacing: 1px;
+    color: $brand-gold;
+    transition: all 0.3s ease-in-out;
+    font-size: 14px;
+
+    &:hover {
+        transform: translateY(-2px);
+        color: $brand-gold;
+    }
+}
+
 
 .terms-policy {
     font-size: 12px;

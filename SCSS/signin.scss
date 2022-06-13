@@ -116,6 +116,8 @@ $mobile: 767px;
     .signin-subtitle {
 
         span {
+            font-size: 14px;
+            
             @media screen and(max-width: $mobile) {
                 color: $brand-lightgray;
             }
