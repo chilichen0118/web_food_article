@@ -11,4 +11,93 @@
   text-decoration: none !important;
   color: #303030;
 }
+
+.header {
+  background-color: transparent;
+}
+
+#nav-btn {
+  width: 24px;
+  height: 24px;
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  cursor: pointer;
+  position: relative;
+  outline: none;
+  border: none;
+  background: transparent;
+}
+
+#nav-btn span {
+  -webkit-transform-origin: left center;
+          transform-origin: left center;
+  display: block;
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background: #ffc700;
+  border-radius: 5px;
+  right: 0;
+  opacity: 1;
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
+  -webkit-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
+}
+
+#nav-btn span:nth-child(1) {
+  top: 0;
+}
+
+#nav-btn span:nth-child(2) {
+  top: 9px;
+  width: 80%;
+}
+
+#nav-btn span:nth-child(3) {
+  top: 18px;
+}
+
+#nav-btn.open span:nth-child(1) {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  right: -3px;
+}
+
+#nav-btn.open span:nth-child(2) {
+  width: 0;
+}
+
+#nav-btn.open span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  top: 17px;
+  right: -3px;
+}
+
+@media screen and (min-width: 1024px) {
+  .nav-sign-area {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .navbar-info {
+    display: none;
+  }
+}
+
+.nav-left {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  width: 100%;
+}
+
+.nav-right {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  width: 100%;
+}
 /*# sourceMappingURL=style.css.map */

@@ -24,3 +24,346 @@ $mobile: 767px;
     color: #303030;
 }
 
+
+
+.header {
+    background-color: transparent;
+    width: 100%;
+    position: relative;
+    padding: 10px 20px;
+    
+}
+
+.nav-left {
+    flex-basis: 50%;
+    @media screen and(max-width: $mobile) {
+        flex-grow: 1;
+    }
+
+    .menu-logo {
+        padding: 10px 10px;
+        min-width: 150px;
+
+        .navbar-logo {
+            min-width: fit-content;
+            @media screen and(max-width: $mobile) {
+                max-width: 120px;
+            }
+
+            img {
+                width: fit-content;
+
+                @media screen and(max-width: $mobile) {
+                    max-width: 120px;
+                }
+            }
+        }
+    }
+}
+
+.nav-right {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+
+    @media screen and(max-width: $mobile) {
+        display: none;
+    }
+
+    .navbar-link {
+        display: block;
+        margin: 0 20px;
+        min-width: fit-content;
+
+        .link-hover {
+            font-size: 18px;
+            font-weight: 700;
+            letter-spacing: 4px;
+            display: inline-block;
+            position: relative;
+
+            &::after {
+                content: '';
+                width: 100%;
+                height: 1.5px;
+                background-color: $brand-gold;
+                border-radius: 5px;
+                position: absolute;
+                left: 0;
+                top: 100%;
+                transform: scaleX(0);
+                transform-origin: left;
+                transition: 0.2s ease;
+            }
+
+            &:hover::after {
+                transform: scaleX(1);
+
+                @media screen and(max-width: $mobile) {
+                    display: none;
+                }
+            }
+
+        }
+    }
+}
+
+.nav-right-signin {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    @media screen and(max-width: $mobile) {
+        display: none;
+    }
+
+    #sign-btn {
+        min-width: 120px;
+        padding: 10px 20px;
+        background: $brand-gold;
+        display: block;
+        color: #fff;
+        text-align: center;
+        letter-spacing: 4px;
+        border-radius: 50px;
+        font-weight: 500;
+        transition: .3s;
+
+        @media screen and(max-width: $mobile) {
+            display: none;
+        }
+        
+        
+        &:hover {
+            box-shadow: 1px 1px 10px 1px $brand-gold;
+            transform: translateX(-2px);
+            transform: translateY(-2px);
+        }
+
+        &:active {
+            transform: translateY(-1);
+            box-shadow: 1px 1px 5px 1px $brand-gold;
+        }
+
+        .nav-sign-btn {
+            color: #fff;
+        }
+    }
+}
+
+#account {
+    margin-left: 20px;
+
+    .account-content {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        #account-img {
+            width: 32px;
+            height: 32px;
+            margin-right: 16px;
+
+            img {
+                width: 100%;
+                background-size: cover;
+            }
+        }
+
+        #account-name::after {
+            content: '陳尼可';
+            letter-spacing: 1px;
+            font-size: 14px;
+        }
+    }
+}
+
+.nav-right,
+.nav-right-signin {
+    flex-basis: 20%;
+}
+
+
+
+
+
+//漢堡選單icon
+#nav-btn {
+    display: block;
+    width: 24px;
+    height: 24px;
+    transform: rotate(0);
+    transition: .5s ease-in-out;
+    cursor: pointer;
+    position: relative;
+    outline: none;
+    border: none;
+    background: transparent;
+    z-index: 99;
+
+    @media screen and(min-width: $tablet) {
+        display: none;
+    }
+
+    span {
+        transform-origin: left center;
+        display: block;
+        position: absolute;
+        height: 4px;
+        width: 100%;
+        background: #ffc700;
+        border-radius: 5px;
+        right: 0;
+        opacity: 1;
+        transform: rotate(0);
+        transition: .25s ease-in-out;
+    }
+
+    span:nth-child(1) {
+        top: 0;
+
+    }
+
+    span:nth-child(2) {
+        top: 9px;
+        width: 80%;
+    }
+
+    span:nth-child(3) {
+        top: 18px;
+    }
+}
+
+#nav-btn.open span:nth-child(1) {
+    transform: rotate(45deg);
+    right: -3px;
+}
+
+#nav-btn.open span:nth-child(2) {
+    width: 0;
+}
+
+#nav-btn.open span:nth-child(3) {
+    transform: rotate(-45deg);
+    top: 17px;
+    right: -3px;
+}
+
+// 手機版MENU
+#nav-overlay {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    z-index: -1;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 50%;
+    transition: 1s;
+    transform: scale3d(0, 0, 0);
+    background: #fff;
+}
+
+#nav-overlay.openbox {
+    transform: scale3d(1, 1, 1);
+}
+
+.wrapper {
+    width: 100%;
+    height: 100vh;
+    padding: 50px 40px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    transition: ease-in-out 0.25s;
+    transition-delay: 0s;
+    visibility: hidden;
+    opacity: 0;
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+
+
+    .nav-sign-item {
+
+        .nav-sign-text {
+            font-size: 12px;
+            font-weight: 300;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        .nav-sign-link {
+            border-radius: 10px;
+            padding: 10px 50px;
+            background: $brand-gold;
+            display: block;
+            color: #fff;
+            text-align: center;
+            letter-spacing: 2px;
+            max-width: 200px;
+            margin-bottom: 10px;
+
+            span {
+                color: #fff;
+            }
+        }
+    }
+
+    .nav-member-title,
+    .navbar-info-title {
+        margin-top: 16px;
+    }
+
+    .menu-title {
+        font-size: 12px;
+        color: $brand-darkgray;
+        font-weight: 500;
+        letter-spacing: 1px;
+    }
+
+
+    .nav-member-item {
+        .member-link-img {
+            margin-right: 10px;
+        }
+    }
+
+    .navbar-info-item {
+        .info-link-img {
+            margin-right: 12px;
+        }
+    }
+
+    .nav-member-item,
+    .navbar-info-item {
+        margin-top: 24px;
+    }
+
+    .nav-items {
+        display: inline-flex;
+        align-items: center;
+
+    }
+
+    .nav-page {
+        letter-spacing: 2px;
+    }
+
+
+}
+
+.wrapper.openbox {
+    visibility: visible;
+    opacity: 1;
+    transition: ease-in-out 0.5s;
+    transition-delay: 0.25s;
+    background-color: #fff;
+}

@@ -1,0 +1,245 @@
+.signin-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 45% 55%;
+      grid-template-columns: 45% 55%;
+  height: 100vh;
+  width: 100%;
+}
+
+@media screen and (max-width: 767px) {
+  .signin-container {
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+    background-image: url(/image/signin.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+.signin-container .signin-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.signin-container .signin-img {
+  height: 100vh;
+  width: 100%;
+  background-image: url(/image/signin.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+@media screen and (max-width: 767px) {
+  .signin-container .signin-img {
+    display: none;
+  }
+}
+
+.signin-group {
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+
+.signin-group .signin-title {
+  margin-bottom: 36px;
+}
+
+.signin-group .signin-title h1 {
+  font-size: 30px;
+  letter-spacing: 3px;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 767px) {
+  .signin-group .signin-title h1 {
+    color: #fff;
+    font-weight: regular;
+  }
+}
+
+.signin-group .form-label {
+  letter-spacing: 1px;
+}
+
+@media screen and (max-width: 767px) {
+  .signin-group .form-label {
+    color: #fff;
+  }
+}
+
+.signin-group .form-control {
+  border: 1.5px solid #e2e2e2;
+  background-color: #fbfbfb;
+}
+
+.signin-group .form-control::-webkit-input-placeholder {
+  color: #e2e2e2;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.signin-group .form-control:-ms-input-placeholder {
+  color: #e2e2e2;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.signin-group .form-control::-ms-input-placeholder {
+  color: #e2e2e2;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.signin-group .form-control::placeholder {
+  color: #e2e2e2;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.signin-group .form-control:focus {
+  -webkit-box-shadow: 0 0 6px #ffc800;
+          box-shadow: 0 0 6px #ffc800;
+  caret-color: #ffc700;
+}
+
+.signin-group .form-control:focus:focus {
+  border-color: #ffc700;
+  border-width: 1px;
+}
+
+.signin-group .signin-btn {
+  background-color: #ffc700;
+  padding: 10px;
+  margin-top: 10px;
+  color: #fff;
+  letter-spacing: 3px;
+  -webkit-box-shadow: 1px 1px 5px 1px #e2e2e2;
+          box-shadow: 1px 1px 5px 1px #e2e2e2;
+  border: 1.5px solid #ffc700;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.signin-group .signin-btn:hover {
+  color: #ffc700;
+  background-color: transparent;
+}
+
+@media screen and (max-width: 767px) {
+  .signin-group .signin-btn {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+}
+
+.signin-group .signin-subtitle span {
+  font-size: 14px;
+}
+
+@media screen and (max-width: 767px) {
+  .signin-group .signin-subtitle span {
+    color: #fbfbfb;
+  }
+}
+
+.signin-group .s-link {
+  color: #ffc700;
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-weight: 300;
+  display: inline-block;
+  position: relative;
+}
+
+.signin-group .s-link::after {
+  content: '';
+  width: 100%;
+  height: 1.5px;
+  background-color: #ffc700;
+  border-radius: 5px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+
+.signin-group .s-link:hover::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+@media screen and (max-width: 767px) {
+  .signin-group .s-link:hover::after {
+    display: none;
+  }
+}
+
+.signin-group .line {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 0%;
+          flex: 1 1 0%;
+  border-bottom: 1px solid #e2e2e2;
+}
+
+.signin-group .other-signin {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  padding: 3px;
+  max-width: 50%;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.signin-group .other-signin:hover {
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+}
+
+.signin-group .other-account {
+  width: 100%;
+  border: 1.5px solid #ffc700;
+}
+
+.signin-group .other-account .o-s-img {
+  margin-right: 10px;
+}
+
+.signin-group .other-account .o-s-img svg {
+  fill: #303030;
+  height: 20px;
+  width: 20px;
+}
+
+@media screen and (max-width: 767px) {
+  .signin-group .other-account .o-s-img svg {
+    fill: #fff;
+  }
+}
+
+.signin-group .other-account .o-s-text span {
+  color: #ffc700;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.terms-policy {
+  font-size: 12px;
+}
+
+.terms-policy .t-p-link {
+  font-size: 12px;
+}
+/*# sourceMappingURL=signin.css.map */
