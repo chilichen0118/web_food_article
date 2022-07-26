@@ -1,6 +1,8 @@
 $brand-gold: #ffc700;
+$brand-lightgold: #fffbef;
 $brand-darkgray: #303030;
 $brand-lightgray: #fbfbfb;
+$brand-red: #bc2c1a;
 $brand-gray: #e2e2e2;
 $tablet: 1024px;
 $mobile: 767px;
@@ -24,6 +26,10 @@ $mobile: 767px;
         display: flex;
         justify-content: center;
         align-items: center;
+
+        @media screen and(max-width: $mobile) {
+            background-color: rgba(48,48,48,.1);
+        }
     }
 
     .signin-img {
@@ -204,5 +210,54 @@ $mobile: 767px;
 
     .t-p-link {
         font-size: 12px;
+    }
+}
+
+.back-index {
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+    cursor: pointer;
+    z-index: 50;
+    width: 60px;
+    height: 60px;
+    transition: .35s all;
+
+    &:hover {
+        filter: brightness(1.1);
+    }
+
+    &::before {
+        content: '';
+        display: block;
+        width: 60px;
+        height: 60px;
+        background-image: url(/image/back_to_top.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: absolute;
+        animation: top 30s linear infinite;
+        z-index: -1;
+
+        @keyframes top {
+            from {
+                transform: rotate(360deg);
+            }
+
+            to {
+                transform: rotate(0);
+            }
+        }
+    }
+
+    span {
+        font-size: 14px;
+        color: #fff;
+        letter-spacing: 1.5px;
+        line-height: 60px;
+        text-align: center;
+        padding-left: 1.5px;
+        font-weight: 500;
     }
 }

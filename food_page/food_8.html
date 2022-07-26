@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>墨麵亭 | 食在心路</title>
+
+    <!-- 食在心路整體樣式 -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- bootstrap 5.1.1 -->
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <!-- 首頁樣式 -->
+    <link rel="stylesheet" href="/css/food.css">
+    <link rel="stylesheet" href="/css/food_page.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="header">
+            <div class="header-box w-100 d-flex justify-content-space-evenly align-items-center">
+                <!-- LOGO -->
+                <div class="nav-left">
+                    <div class="menu-logo">
+                        <a href="/index.html" class="navbar-logo">
+                            <img src="/image/logo.png" alt="食在心路">
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 搜好食 & 找心路link -->
+                <div class="nav-right">
+
+                    <a href="/page/food.html" class="navbar-link">
+                        <span class="link-hover">搜好食</span>
+                    </a>
+
+                    <a href="/page/article.html" class="navbar-link">
+                        <span class="link-hover">找心路</span>
+                    </a>
+
+                </div>
+                <!-- 饕客登入按鈕 -->
+                <div class="nav-right-signin d-inline-flex align-items-center">
+                    <a href="/page/signin.html" id="sign-btn">
+                        <span class="nav-sign-btn">饕客登入</span>
+                    </a>
+                    <div id="account" class="d-none">
+                        <!-- 會員 -->
+                        <a href="" class="account-content">
+                            <!-- 會員頭像 -->
+                            <div id="account-img">
+                                <img src="/image/account.png" alt="會員頭像">
+                            </div>
+                            <!-- 會員名稱 -->
+                            <div class="account-text">
+                                <span id="account-name"></span>
+                            </div>
+                        </a>
+
+                    </div>
+                </div>
+                <!-- 漢堡選單 -->
+                <div class="menu-btn">
+                    <button id="nav-btn" type="button">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+
+                <!-- 手機版MENU -->
+                <div id="nav-overlay"></div>
+                <nav class="wrapper">
+                    <ul id="nav-sign-area">
+                        <li class="nav-sign-item">
+                            <div class="nav-sign-text">
+                                <span>
+                                    登入後，掌握最新資訊！
+                                </span>
+                            </div>
+                            <a href="/page/signin.html" class="nav-sign-link">
+                                <span>登入&nbsp;|&nbsp;註冊</span>
+                            </a>
+
+                        </li>
+
+                        <li class="nav-member-title">
+                            <span class="menu-title">我的會員帳戶</span>
+                        </li>
+                        <li class="nav-member-item">
+                            <a href="" class="navbar-member-link nav-items">
+                                <div class="member-link-img">
+                                    <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd"
+                                        clip-rule="evenodd">
+                                        <path
+                                            d="M22 24h-17c-1.657 0-3-1.343-3-3v-18c0-1.657 1.343-3 3-3h17v24zm-2-4h-14.505c-1.375 0-1.375 2 0 2h14.505v-2zm0-18h-3v9l-2-1.547-2 1.547v-9h-8v16h15v-16z" />
+                                    </svg>
+                                </div>
+                                <div class="member-link-text">
+                                    <span class="nav-page">我的心路</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-member-item">
+                            <a href="" class="navbar-member-link nav-items">
+                                <div class="member-link-img">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                                        <path fill="none" d="M0 0h24v24H0z" />
+                                        <path
+                                            d="M5 2h14a1 1 0 0 1 1 1v19.143a.5.5 0 0 1-.766.424L12 18.03l-7.234 4.536A.5.5 0 0 1 4 22.143V3a1 1 0 0 1 1-1zm13 2H6v15.432l6-3.761 6 3.761V4z" />
+                                    </svg>
+                                </div>
+                                <div class="member-link-text">
+                                    <span class="nav-page">口袋清單</span>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li class="navbar-info-title">
+                            <span class="menu-title">資訊</span>
+                        </li>
+                        <li class="navbar-info-item">
+                            <a href="" class="navbar-info-link nav-items">
+                                <div class="info-link-img">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                                        <path fill="none" d="M0 0h24v24H0z" />
+                                        <path
+                                            d="M12 14v8H4a8 8 0 0 1 8-8zm0-1c-3.315 0-6-2.685-6-6s2.685-6 6-6 6 2.685 6 6-2.685 6-6 6zm9.446 7.032l1.504 1.504-1.414 1.414-1.504-1.504a4 4 0 1 1 1.414-1.414zM18 20a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" />
+                                    </svg>
+                                </div>
+                                <div class="info-link-text">
+                                    <span class="nav-page">客服中心</span>
+                                </div>
+                            </a>
+
+                        </li>
+                        <li class="navbar-info-item">
+                            <a href="" class="navbar-info-link nav-items">
+                                <div class="info-link-img">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                                        <path fill="none" d="M0 0h24v24H0z" />
+                                        <path
+                                            d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm-1-5h2v2h-2v-2zm2-1.645V14h-2v-1.5a1 1 0 0 1 1-1 1.5 1.5 0 1 0-1.471-1.794l-1.962-.393A3.501 3.501 0 1 1 13 13.355z" />
+                                    </svg>
+                                </div>
+                                <div class="info-link-text">
+                                    <span class="nav-page">常見問答</span>
+                                </div>
+                            </a>
+
+                        </li>
+
+
+                        <li class="navbar-info-item">
+                            <a href="" class="navbar-info-link nav-items">
+                                <div class="info-link-img">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                                        <path fill="none" d="M0 0h24v24H0z" />
+                                        <path
+                                            d="M3.783 2.826L12 1l8.217 1.826a1 1 0 0 1 .783.976v9.987a6 6 0 0 1-2.672 4.992L12 23l-6.328-4.219A6 6 0 0 1 3 13.79V3.802a1 1 0 0 1 .783-.976zM5 4.604v9.185a4 4 0 0 0 1.781 3.328L12 20.597l5.219-3.48A4 4 0 0 0 19 13.79V4.604L12 3.05 5 4.604zM12 11a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5zm-4.473 5a4.5 4.5 0 0 1 8.946 0H7.527z" />
+                                    </svg>
+                                </div>
+                                <div class="info-link-text">
+                                    <span class="nav-page">隱私政策</span>
+                                </div>
+                            </a>
+
+                        </li>
+
+
+                        <li class="navbar-info-item">
+                            <a href="" class="navbar-info-link nav-items">
+                                <div class="info-link-img">
+                                    <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd"
+                                        clip-rule="evenodd">
+                                        <path
+                                            d="M23.999 12.149c-.049 3.834-1.893 7.223-4.706 9.378-1.993 1.53-4.485 2.449-7.198 2.473-6.464.057-12.051-5.107-12.095-12 3.966 1.066 7.682-1.993 6-6 4.668.655 6.859-2.389 6.077-6 6.724.064 11.999 5.542 11.922 12.149zm-15.576-4.123c-.065 3.393-2.801 5.868-6.182 6.166 1.008 4.489 5.015 7.807 9.759 7.807 5.262 0 9.576-4.072 9.97-9.229.369-4.818-2.755-9.357-7.796-10.534-.277 2.908-2.381 5.357-5.751 5.79zm5.077 8.974c.828 0 1.5.672 1.5 1.5s-.672 1.5-1.5 1.5-1.5-.672-1.5-1.5.672-1.5 1.5-1.5zm-5.5-2.853c1.104 0 2 .896 2 2s-.896 2-2 2-2-.896-2-2 .896-2 2-2zm10-2.147c1.104 0 2 .896 2 2s-.896 2-2 2-2-.896-2-2 .896-2 2-2zm-5 0c.552 0 1 .448 1 1s-.448 1-1 1-1-.448-1-1 .448-1 1-1zm2.5-5c.828 0 1.5.672 1.5 1.5s-.672 1.5-1.5 1.5-1.5-.672-1.5-1.5.672-1.5 1.5-1.5zm-12.5 0c.552 0 1 .448 1 1s-.448 1-1 1-1-.448-1-1 .448-1 1-1zm-1.5-4c.828 0 1.5.672 1.5 1.5s-.672 1.5-1.5 1.5-1.5-.672-1.5-1.5.672-1.5 1.5-1.5zm6-2c.828 0 1.5.672 1.5 1.5s-.672 1.5-1.5 1.5-1.5-.672-1.5-1.5.672-1.5 1.5-1.5zm-3.5-1c.552 0 1 .448 1 1s-.448 1-1 1-1-.448-1-1 .448-1 1-1z" />
+                                    </svg>
+                                </div>
+                                <div class="info-link-text">
+                                    <span class="nav-page">cookie政策</span>
+                                </div>
+                            </a>
+
+                        </li>
+
+
+                        <li class="navbar-info-item">
+                            <a href="" class="navbar-info-link nav-items">
+
+                                <div class="info-link-img">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                        <path
+                                            d="M6 12h10v1h-10v-1zm7.816-3h-7.816v1h9.047c-.45-.283-.863-.618-1.231-1zm-7.816-2h6.5c-.134-.32-.237-.656-.319-1h-6.181v1zm13 3.975v2.568c0 4.107-6 2.457-6 2.457s1.518 6-2.638 6h-7.362v-20h9.5c.312-.749.763-1.424 1.316-2h-12.816v24h10.189c3.163 0 9.811-7.223 9.811-9.614v-3.886c-.623.26-1.297.421-2 .475zm4-6.475c0 2.485-2.015 4.5-4.5 4.5s-4.5-2.015-4.5-4.5 2.015-4.5 4.5-4.5 4.5 2.015 4.5 4.5zm-2.156-.882l-.696-.696-2.116 2.169-.992-.941-.696.697 1.688 1.637 2.812-2.866z" />
+                                    </svg>
+                                </div>
+                                <div class="info-link-text">
+                                    <span class="nav-page">服務條款</span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+            </div>
+
+        </div>
+    </header>
+
+    <div class="search-food d-flex">
+        <div class="container-fluid" id="s_f_box_1">
+            <div class="container search-food-input d-flex">
+                <div class="s-f-i-area">
+                    <input type="search" name="" id="s_f_input_one" placeholder="燒肉">
+                </div>
+                <div class="s-f-i-area">
+                    <input type="search" name="" id="s_f_input_two" placeholder="台中市">
+                </div>
+                <div class="s-f-i-btn">
+                    <input type="button" id="s_f_btn" value="搜出美味">
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid" id="s_f_box_2">
+            <div class="container search-food-filter d-flex">
+                <div class="s-f-f-tltle">
+                    <span class="s-f-f-text">篩選條件</span>
+                </div>
+                <div class="s-f-f-btn dropdown">
+                    <button class="btn btn-secondary dropdown-toggle s-f-f-button" type="button"
+                        id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        葷素種類
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item f-d-items" href="#">葷食</a></li>
+                        <li><a class="dropdown-item f-d-items" href="#">全食</a></li>
+                        <li><a class="dropdown-item f-d-items" href="#">蛋奶素</a></li>
+                    </ul>
+                </div>
+                <div class="s-f-f-btn dropdown">
+                    <button class="btn btn-secondary dropdown-toggle s-f-f-button" type="button"
+                        id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+                        星級評等
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                        <li><a class="dropdown-item f-d-items" href="#">五星等</a></li>
+                        <li><a class="dropdown-item f-d-items" href="#">四星等</a></li>
+                        <li><a class="dropdown-item f-d-items" href="#">三星等</a></li>
+                        <li><a class="dropdown-item f-d-items" href="#">二星等</a></li>
+                        <li><a class="dropdown-item f-d-items" href="#">一星等</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid food-bigimg">
+            <img src="/image/d-four-img-g1.jpg" alt="">
+        </div>
+        <div class="container food-page d-flex">
+            <div class="food-shop-info">
+                <div class="food-shop-info-area">
+                    <div class="shop-info-top">
+                        <div class="f-s-logo"></div>
+                        <div class="f-s-name">
+                            <h1>墨麵亭</h1>
+                        </div>
+                        <div class="f-s-other">
+                            <div class="f-s-star">
+                                <div class="f-s-star-icon"></div>
+                                <div class="f-s-star-text">4.1</div>
+                            </div>
+                            <div class="f-s-comment">
+                                <div class="f-s-comment-text">137</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="f-s-hr"></div>
+                    <div class="shop-info-center">
+                        <div class="f-s-tel">
+                            <span class="tel-icon"></span>
+                            <a href="" class="tel-content">03-3644590</a>
+                        </div>
+                        <div class="f-s-time">
+                            <span class="time-icon"></span>
+                            <span class="time-content t-c-symbol">11:00</span>
+                            <span class="time-content">20:00</span>
+                        </div>
+                        <div class="f-s-add">
+                            <span class="add-icon"></span>
+                            <a href="" class="add-content">桃園市八德區興豐路845號</a>
+                        </div>
+                        <div class="f-s-web">
+                            <span class="web-icon"></span>
+                            <a href="" class="web-content">moonoodels.com</a>
+                        </div>
+                        <div class="f-s-pay">
+                            <span class="pay-title">付款方式：</span>
+                            <div class="pay-content-box">
+                                <span class="pay-content pay-content-1">現金</span>
+                                <!-- <span class="pay-content pay-content-2">信用卡</span> -->
+                            </div>
+                        </div>
+                        <div class="f-s-fast">
+                            <span class="fast-title">外送合作：</span>
+                            <div class="fast-content-box">
+                                <span class="fast-content fast-content-1"></span>
+                                <!-- <span class="fast-content fast-content-2"></span> -->
+                            </div>
+                        </div>
+                        <!-- <div class="f-s-park">
+                            <span class="park-title">停車資訊：</span>
+                            <div class="park-content-box">
+                                <span class="park-content">特約停車場</span>
+                            </div>
+                        </div> -->
+                        <div class="f-s-serve">
+                            <span class="serve-title">服務選項：</span>
+                            <div class="serve-content-box">
+                                <span class="serve-content serve-content-1">內用</span>
+                                <span class="serve-content serve-content-2">外帶</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="shop-info-bottom">
+                        <div class="tel-btn">
+                            <a href="" class="f-s-link">電話預約</a>
+                        </div>
+                        <div class="reserve-btn">
+                            <a href="" class="f-s-link">線上預約</a>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+            <div class="food-shop-detail">
+                <div class="s-d-nav">
+                    <ul class="nav-group">
+                        <a href="#s-d-area-one">
+                            <li class="nav-list nav-active">餐廳資訊</li>
+                        </a>
+                        <a href="#s-d-area-two">
+                            <li class="nav-list">菜單</li>
+                        </a>
+                        <a href="#s-d-area-three" class="nav-phone-other">
+                            <li class="nav-list">詳細資訊</li>
+                        </a>
+                        <a href="#s-d-area-three" class="nav-phone-hide">
+                            <li class="nav-list">餐點</li>
+                        </a>
+                        <a href="#s-d-area-four" class="nav-phone-hide">
+                            <li class="nav-list">餐廳環境</li>
+                        </a>
+                        <a href="#s-d-area-five" class="nav-phone-hide">
+                            <li class="nav-list">產品資訊</li>
+                        </a>
+                        <a href="#s-d-area-six">
+                            <li class="nav-list">評價</li>
+                        </a>
+                    </ul>
+                </div>
+                <div id="s-d-area-one">
+                    <div class="d-one">
+                        <a href="" class="d-one-map d-block">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3617.963724022272!2d121.29801415122212!3d24.933305683941075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346818e4322a60af%3A0xab9ae839819cde4!2zMzM05qGD5ZyS5biC5YWr5b635Y2A6IiI6LGQ6LevODQ16Jmf!5e0!3m2!1szh-TW!2stw!4v1658736995097!5m2!1szh-TW!2stw" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </a>
+                        <div class="d-one-content">
+                            <div class="d-o-tel">
+                                <div class="d-tel-img"></div>
+                                <a href="" class="d-tel-content d-block">03-3644590</a>
+                            </div>
+                            <div class="d-o-time">
+                                <div class="d-time-img"></div>
+                                <div class="d-time-content d-time-symbol">11:00</div>
+                                <div class="d-time-content">20:00</div>
+                            </div>
+                            <div class="d-o-add">
+                                <div class="d-add-img"></div>
+                                <a href="" class="d-add-content d-block">桃園市八德區興豐路845號</a>
+                            </div>
+                            <div class="d-o-other">
+                                <div class="d-other-content">
+                                    <a href="" class="d-other-btn">電話預約</a>
+                                </div>
+                                <div class="d-other-content">
+                                    <a href="" class="d-other-btn">線上預約</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="s-d-area-two">
+                    <div class="d-two">
+                        <div class="d-two-title">
+                            <span class="d-block d-title">菜單</span>
+                        </div>
+                        <div class="d-two-content">
+                            <div class="d-two-img">
+                                <img src="/image/menu-1.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="s-d-area-three">
+                    <div class="d-three">
+                        <div class="d-three-title">
+                            <span class="d-block d-title">餐點</span>
+                        </div>
+                        <div class="d-three-content">
+                            <div class="d-three-box">
+                                <div class="d-three-img">
+                                    <img src="/image/d-three-img-h1.jpg" alt="紅燒牛肉麵">
+                                </div>
+                                <h6 class="d-three-text">紅燒牛肉麵</h6>
+                            </div>
+                            <div class="d-three-box">
+                                <div class="d-three-img">
+                                    <img src="/image/d-three-img-h2.jpg" alt="古早味肉燥乾麵">
+                                </div>
+                                <h6 class="d-three-text">古早味肉燥乾麵</h6>
+                            </div>
+                            <div class="d-three-box">
+                                <div class="d-three-img">
+                                    <img src="/image/d-three-img-h3.jpg" alt="滿福豬乾麵">
+                                </div>
+                                <h6 class="d-three-text">滿福豬乾麵</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="s-d-area-four">
+                    <div class="d-four">
+                        <div class="d-four-title">
+                            <span class="d-block d-title">餐廳環境</span>
+                        </div>
+                        
+                        <div class="d-four-content">
+                            <div class="d-four-img">
+                                <img src="/image/d-four-img-h1.jpg" alt="墨麵亭">
+                            </div>
+                            <div class="d-four-img">
+                                <img src="/image/d-four-img-h2.jpg" alt="墨麵亭">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="s-d-area-five">
+                    <div class="d-five">
+                        <div class="d-five-title">
+                            <span class="d-block d-title">產品資訊</span>
+                        </div>
+                        <!-- <div class="d-five-content">
+                            <div class="d-five-box">
+                                <div class="d-five-img">
+                                    <img src="/image/d-five-img-c1.jpg" alt="冷凍高麗菜水餃">
+                                </div>
+                                <h6 class="d-five-text">冷凍高麗菜水餃</h6>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+                <div id="s-d-area-six">
+                    <div class="d-six">
+                        <div class="d-six-title">
+                            <span class="d-block d-title">評分</span>
+                        </div>
+                        <div class="d-six-content">
+                            <div class="d-six-star">
+                                <div class="d-s-star-top">
+                                    <div class="d-s-star-icon"></div>
+                                    <div class="d-s-star-text">4.1</div>
+                                </div>
+                                <div class="d-s-star-bottom">
+                                    <span class="d-s-star-comment">137</span>
+                                </div>
+                            </div>
+                            <div class="d-six-write">
+                                <button class="write-btn">撰寫評論</button>
+                            </div>
+                        </div>
+                        <div class="writer-area">
+                            <div class="writer-card">
+                                <div class="w-card-name">
+                                    <div class="writer-img">
+                                        <img src="/image/writer-img-1.jpg" alt="">
+                                    </div>
+                                    <div class="writer-text">蔡佩茹</div>
+                                </div>
+                                <div class="w-card-content">
+                                    <div class="writer-comment">
+                                        <div class="w-comment-icon"></div>
+                                        <div class="w-comment-text">4.0</div>
+                                    </div>
+                                    <div class="writer-title">
+                                        <span class="w-title-text">環境乾淨</span>
+                                    </div>
+                                    <div class="writer-content">
+                                        <p class="w-content-text">小菜普通，古早味乾麵有一點點鹹。</p>
+                                    </div>
+                                    <div class="writer-date">
+                                        <span class="w-date-text">2022年7月12日</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="writer-card">
+                                <div class="w-card-name">
+                                    <div class="writer-img">
+                                        <img src="/image/writer-img-2.jpg" alt="">
+                                    </div>
+                                    <div class="writer-text">張俊凱</div>
+                                </div>
+                                <div class="w-card-content">
+                                    <div class="writer-comment">
+                                        <div class="w-comment-icon"></div>
+                                        <div class="w-comment-text">4.3</div>
+                                    </div>
+                                    <div class="writer-title">
+                                        <span class="w-title-text">紅燒牛肉麵好吃</span>
+                                    </div>
+                                    <div class="writer-content">
+                                        <p class="w-content-text">本身不敢吃很辣，但他們家紅燒牛肉麵小辣，牛肉很軟嫩！</p>
+                                    </div>
+                                    <div class="writer-date">
+                                        <span class="w-date-text">2022年7月10日</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="writer-card">
+                                <div class="w-card-name">
+                                    <div class="writer-img">
+                                        <img src="/image/writer-img-3.jpg" alt="">
+                                    </div>
+                                    <div class="writer-text">劉廷</div>
+                                </div>
+                                <div class="w-card-content">
+                                    <div class="writer-comment">
+                                        <div class="w-comment-icon"></div>
+                                        <div class="w-comment-text">4.1</div>
+                                    </div>
+                                    <div class="writer-title">
+                                        <span class="w-title-text">小菜好吃</span>
+                                    </div>
+                                    <div class="writer-content">
+                                        <p class="w-content-text">小菜選擇多，好吃。</p>
+                                    </div>
+                                    <div class="writer-date">
+                                        <span class="w-date-text">2022年7月05日</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="writer-card">
+                                <div class="w-card-name">
+                                    <div class="writer-img">
+                                        <img src="/image/writer-img-4.jpg" alt="">
+                                    </div>
+                                    <div class="writer-text">吳俊憲</div>
+                                </div>
+                                <div class="w-card-content">
+                                    <div class="writer-comment">
+                                        <div class="w-comment-icon"></div>
+                                        <div class="w-comment-text">4.5</div>
+                                    </div>
+                                    <div class="writer-title">
+                                        <span class="w-title-text">可以免費加一球麵，很有飽足感</span>
+                                    </div>
+                                    <div class="writer-content">
+                                        <p class="w-content-text">老闆人很好，可以幫客人免費加一球麵，湯還可以無限續加！</p>
+                                    </div>
+                                    <div class="writer-date">
+                                        <span class="w-date-text">2022年6月29日</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="writer-card">
+                                <div class="w-card-name">
+                                    <div class="writer-img">
+                                        <img src="/image/writer-img-5.jpg" alt="">
+                                    </div>
+                                    <div class="writer-text">陳曉晴</div>
+                                </div>
+                                <div class="w-card-content">
+                                    <div class="writer-comment">
+                                        <div class="w-comment-icon"></div>
+                                        <div class="w-comment-text">4.0</div>
+                                    </div>
+                                    <div class="writer-title">
+                                        <span class="w-title-text">分量很足</span>
+                                    </div>
+                                    <div class="writer-content">
+                                        <p class="w-content-text">等候時間有點久，麵的份量蠻多的！</p>
+                                    </div>
+                                    <div class="writer-date">
+                                        <span class="w-date-text">2022年6月27日</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="back-btn"><span class="d-block">TOP</span></div>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="container-fluid w-100 text-align-center">
+            <span class="copyright text-align-center d-block">
+                copyright&ensp;&copy;&ensp;一扇門數位工作室&ensp;2022
+            </span>
+        </div>
+    </footer>
+
+    <!-- jquery 3.6.0 -->
+    <script src="/js/jquery-3.6.0.js"></script>
+    <!-- bootstrap 5.1.1 -->
+    <script src="/js/bootstrap.bundle.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/food.js"></script>
+    <script src="/js/food_page.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,920 @@
+$brand-gold: #ffc700;
+$brand-lightgold: #fffbef;
+$brand-darkgray: #303030;
+$brand-lightgray: #fbfbfb;
+$brand-red: #bc2c1a;
+$brand-gray: #e2e2e2;
+$tablet: 1024px;
+$mobile: 767px;
+
+.h-change-color {
+    background-color: $brand-lightgray;
+    box-shadow: 0 5px 10px rgba(226, 226, 226, 0.5);
+
+    @media screen and(max-width: $mobile) {
+        background-color: $brand-gold;
+    }
+}
+
+.search-food {
+    flex-direction: column;
+    width: 100%;
+}
+
+#s_f_box_1 {
+    background-color: $brand-darkgray;
+}
+
+#s_f_box_2 {
+    background-color: $brand-lightgray;
+    box-shadow: 0 2px 5px $brand-gray;
+
+    @media screen and(max-width: $mobile) {
+        background-color: $brand-gray;
+    }
+}
+
+.s-f-i-area {
+    flex-basis: 80%;
+    padding-right: 2%;
+
+    @media screen and(max-width: $mobile) {
+        flex-basis: 100%;
+        padding: 0 15px;
+    }
+}
+
+.search-food-input {
+    flex-direction: row;
+    height: fit-content;
+    padding: 15px 0;
+
+    #s_f_input_one,
+    #s_f_input_two {
+        width: 100%;
+        padding: 12px 20px 12px 50px;
+        font-size: 16px;
+        letter-spacing: 1px;
+        color: $brand-darkgray;
+        caret-color: $brand-gold;
+        border-radius: 30px;
+        border: 1.5px solid $brand-gray;
+        background-color: $brand-lightgray;
+        background-image: url(/image/search-line.svg);
+        background-repeat: no-repeat;
+        background-position: 15px center;
+        transform-origin: 50% 50%;
+
+        &:focus {
+            box-shadow: 0 0 6px rgb(255, 200, 0);
+            caret-color: $brand-gold;
+            border: 1.5px solid $brand-gold;
+            outline: 0;
+            color: $brand-darkgray;
+            background-color: #fff;
+        }
+
+        &::placeholder {
+            font-size: 16px;
+            color: $brand-darkgray;
+            letter-spacing: 1px;
+            font-weight: 300;
+
+            @media screen and(max-width: $mobile) {
+                font-size: 14px;
+            }
+        }
+
+        &::-webkit-search-cancel-button {
+            appearance: none;
+            background-image: url(/image/close-fill.svg);
+            background-size: contain;
+            height: 24px;
+            width: 24px;
+            cursor: pointer;
+        }
+    }
+
+    #s_f_btn {
+
+        background-color: $brand-gold;
+        border: 2px solid $brand-gold;
+        border-radius: 50px;
+        padding: 12px 0 12px 0;
+        max-width: 200px;
+        min-width: 180px;
+        letter-spacing: 2px;
+        text-align: center;
+        font-weight: 500;
+        font-size: 16px;
+        color: #fff;
+        display: block;
+        transition: .35s;
+
+        @media screen and(max-width: $mobile) {
+            display: none;
+        }
+
+    }
+}
+
+.search-food-filter {
+    flex-direction: row;
+    height: fit-content;
+    padding: 15px 0;
+    justify-content: flex-start;
+    align-items: center;
+
+    @media screen and(max-width: $mobile) {
+        padding: 15px;
+    }
+
+    .s-f-f-tltle {
+        padding-right: 30px;
+
+        .s-f-f-text {
+            color: $brand-darkgray;
+            letter-spacing: 2px;
+            font-size: 14px;
+        }
+    }
+
+    .s-f-f-btn {
+
+        .s-f-f-button {
+            background-color: #fff;
+            border: 1px solid $brand-gray;
+            color: $brand-darkgray;
+            border-radius: 30px;
+            padding: 10px 20px;
+            letter-spacing: 1.5px;
+            font-size: 16px;
+            margin-right: 15px;
+
+            @media screen and(max-width: $mobile) {
+                font-size: 14px;
+            }
+
+            &:focus-visible {
+                outline: none;
+            }
+
+            &:focus {
+                box-shadow: none;
+                outline: 1px solid $brand-darkgray;
+            }
+        }
+
+        .f-d-items {
+            letter-spacing: 1.5px;
+            font-size: 16px;
+            padding-top: 8px;
+            padding-bottom: 5px;
+
+            @media screen and(max-width: $mobile) {
+                font-size: 14px;
+            }
+
+            &:hover {
+                background-color: $brand-lightgold;
+            }
+        }
+    }
+}
+
+.search-food-value {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 50px;
+
+    @media screen and(max-width: $mobile) {
+        padding: 15px;
+        background-color: $brand-lightgray;
+    }
+}
+
+.s-f-v-filter {
+    display: flex;
+    flex-direction: column;
+    padding-right: 60px;
+    flex-basis: 20%;
+
+    @media screen and(max-width: $mobile) {
+        display: none;
+    }
+
+    .v-fd-map {
+        width: 100%;
+        height: 150px;
+        background-color: $brand-gray;
+        border-radius: 20px;
+    }
+
+    .v-fd-title {
+        padding: 15px 0;
+        text-align: center;
+
+        .v-f-t-text {
+            letter-spacing: 1.5px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+    }
+
+    .v-fd-content {
+        flex-direction: column;
+        padding-top: 15px;
+
+        .v-fd-c-box {
+            .v-fd-c-subtitle {
+                letter-spacing: 1.5px;
+                font-size: 16px;
+                padding-bottom: 15px;
+            }
+
+            .v-fd-c-items {
+                flex-direction: column;
+
+                .f-class {
+                    display: block;
+                    position: relative;
+                    cursor: pointer;
+                    user-select: none;
+                    font-size: 14px;
+                    padding-left: 30px;
+                    margin-bottom: 10px;
+                    letter-spacing: 1px;
+
+
+                    &:hover input~.input-style {
+                        background-color: $brand-lightgray;
+                    }
+
+                    & input:checked~.input-style {
+                        background-color: $brand-gold;
+                        border-color: $brand-gold;
+                    }
+
+                    & input:checked~.input-style::after {
+                        display: block;
+                    }
+
+                    & .input-style::after {
+                        left: 6px;
+                        top: 2px;
+                        width: 6px;
+                        height: 10px;
+                        border: solid #fff;
+                        border-width: 0 3px 3px 0;
+                        transform: rotate(45deg);
+                    }
+
+                    input {
+                        position: absolute;
+                        opacity: 0;
+                        cursor: pointer;
+                        height: 0;
+                        width: 0;
+                    }
+
+                    .input-style {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 18px;
+                        height: 18px;
+                        background-color: #fff;
+                        border: .5px solid $brand-darkgray;
+                        border-radius: 2px;
+
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            display: none;
+                        }
+                    }
+
+
+                }
+
+
+            }
+        }
+    }
+}
+
+// 卡片區
+
+.s-f-v-cards {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 75%;
+    width: 100%;
+
+    @media screen and(max-width: $mobile) {
+        flex-basis: 100%;
+        padding: 0 2%;
+    }
+}
+
+.v-f-special {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background-color: $brand-gray;
+    padding: 10px 20px;
+    border-radius: 20px;
+
+    .v-f-s-left {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        .v-f-s-img {
+            width: 50px;
+            height: 50px;
+            background-image: url(/image/special.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+        }
+
+        .v-f-s-title {
+            margin-left: 15px;
+
+            .v-f-s-text {
+                font-size: 16px;
+                font-weight: 500;
+                letter-spacing: 2px;
+            }
+        }
+    }
+
+    .v-f-s-right {
+        .v-f-s-btn {
+            width: 70px;
+            height: 40px;
+            background-color: $brand-gray;
+            border-radius: 40px;
+            position: relative;
+
+            @media screen and(max-width: $mobile) {
+                width: 60px;
+            }
+        }
+
+        .v-f-s-btn input {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+            appearance: none;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 85%;
+                height: 75%;
+                background-color: #fff;
+                border-radius: 40px;
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 50%;
+                transform: translate(7px, -50%);
+                width: 25px;
+                height: 25px;
+                background-color: $brand-gray;
+                opacity: 0.5;
+                border-radius: 40px;
+                transition: all .35s;
+            }
+
+            &:checked::after {
+                transform: translate(150%, -50%);
+                background-color: $brand-gold;
+                opacity: 1;
+
+                @media screen and(max-width: $mobile) {
+                    transform: translate(110%, -50%);
+                }
+            }
+        }
+    }
+}
+
+.v-f-order {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 0;
+
+    @media screen and(max-width: $mobile) {
+        height: auto;
+    }
+
+    .v-f-o-title {
+        border: 1px solid $brand-lightgray;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        text-align: center;
+        padding: 10px 15px;
+        flex-basis: 10%;
+        background-color: $brand-lightgray;
+
+        @media screen and(max-width: $mobile) {
+            flex-basis: 20%;
+            background-color: $brand-gray;
+            border-color: $brand-gray;
+        }
+    }
+
+    .v-f-o-btn {
+        flex-basis: 45%;
+        text-align: center;
+        border: 1px solid $brand-gray;
+        padding: 10px 15px;
+        cursor: pointer;
+        background-color: #fff;
+
+        @media screen and(max-width: $mobile) {
+            flex-basis: 40%;
+        }
+
+        &:nth-last-child(1) {
+            border-bottom-right-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        .v-f-o-icon {
+            position: relative;
+            display: block;
+            width: 8px;
+            height: 8px;
+            cursor: pointer;
+            margin-left: 10px;
+
+            &::before,
+            &::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                width: 2px;
+                height: 100%;
+                border-radius: 5px;
+                background-color: $brand-darkgray;
+            }
+
+            &::before {
+                left: 1px;
+                transform: rotate(-45deg);
+            }
+
+            &::after {
+                right: 1px;
+                transform: rotate(45deg);
+            }
+
+        }
+
+        .v-f-o-icon.f-arrow-change::before,
+        .v-f-o-icon.f-arrow-change::after {
+            background-color: #fff;
+        }
+    }
+
+    .v-f-o-text {
+        font-size: 16px;
+        font-weight: 400;
+        letter-spacing: 1.5px;
+        text-align: center;
+        color: $brand-darkgray;
+
+        @media screen and(max-width: $mobile) {
+            font-size: 12px;
+        }
+    }
+
+    .v-f-o-btn-two {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        @media screen and(max-width: $mobile) {
+            height: 100%;
+        }
+    }
+
+    .v-f-o-icon-arrow {
+        transition: .35s linear transform;
+
+        &.f-icon-arrow-active {
+            transform: rotateX(180deg);
+        }
+    }
+
+    .v-f-o-text-active {
+        background-color: $brand-gold;
+        border-color: $brand-gold;
+        transition: .35s;
+    }
+}
+
+.v-f-card {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin: 20px 0;
+    box-shadow: 2px 3px 8px $brand-gray;
+    border-radius: 30px;
+    transition: .35s;
+
+    @media screen and(max-width: $mobile) {
+        flex-direction: column;
+    }
+
+    &:hover {
+        transform: translate(-2px, -2px);
+        box-shadow: 2px 3px 10px $brand-gray;
+    }
+
+    .v-f-card-img {
+        flex-basis: 35%;
+        width: 100%;
+        height: 200px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        border-top-left-radius: 30px;
+        border-bottom-left-radius: 30px;
+
+        @media screen and(max-width: $mobile) {
+            width: 100%;
+            height: 250px;
+            flex-basis: auto;
+            border-bottom-left-radius: 0;
+            border-top-right-radius: 30px;
+        }
+
+        .v-f-more-img {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            position: absolute;
+            right: 0;
+            bottom: 15%;
+
+            @media screen and(max-width: $mobile) {
+                z-index: -1;
+            }
+
+            .more-img {
+                height: 50px;
+                width: 100%;
+                border: 1px solid #fff;
+                position: relative;
+
+                img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                    object-position: center;
+                }
+            }
+
+            // .more-img-one,
+            // .more-img-three {
+            //     background-image: url(/image/article-card-2.jpg);
+            //     background-repeat: no-repeat;
+            //     background-size: cover;
+            //     height: 50px;
+            //     width: 100%;
+            // }
+
+            // .more-img-two,
+            // .more-img-fore {
+            //     background-image: url(/image/article-card-1.jpg);
+            //     background-repeat: no-repeat;
+            //     background-size: cover;
+            //     height: 50px;
+            //     width: 100%;
+            // }
+
+            .more-img-fore::after {
+                content: '看照片';
+                color: $brand-lightgray;
+                font-size: 10px;
+                background-color: rgba(48, 48, 48, .5);
+                width: 100%;
+                height: 50px;
+                text-align: center;
+                display: block;
+                line-height: 50px;
+                letter-spacing: 2px;
+                position: absolute;
+                top: 0;
+            }
+        }
+    }
+
+    #f_card_1 {
+        background-image: url(/image/food-bigimg-1.jpg);
+    }
+
+    #f_card_2 {
+        background-image: url(/image/d-five-bigimg-d1.jpg);
+    }
+
+    #f_card_3 {
+        background-image: url(/image/d-three-img-c1.jpg);
+    }
+
+    #f_card_4 {
+        background-image: url(/image/d-three-img-f1.jpg);
+    }
+
+    #f_card_5 {
+        background-image: url(/image/d-three-img-g4.jpg);
+    }
+
+    #f_card_6 {
+        background-image: url(/image/d-three-img-e2.jpg);
+    }
+
+    #f_card_7 {
+        background-image: url(/image/more-img-g2.jpg);
+    }
+
+    #f_card_8 {
+        background-image: url(/image/d-three-img-h2.jpg);
+    }
+
+    #f_card_9 {
+        background-image: url(/image/d-three-img-i3.jpg);
+    }
+
+    #f_card_10 {
+        background-image: url(/image/d-three-img-j1.jpg);
+    }
+
+    .v-f-card-text {
+        flex-basis: 45%;
+        padding: 15px 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: #fff;
+
+        @media screen and(max-width: $mobile) {
+            border-bottom-left-radius: 30px;
+            border-bottom-right-radius: 30px;
+            justify-content: space-evenly;
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+
+        .v-f-text-top {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .f-c-t-city {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-top: 5px;
+
+            .c-icon {
+                width: 20px;
+                height: 20px;
+                background-image: url(/image/icon-map.svg);
+                background-size: contain;
+                background-repeat: no-repeat;
+                margin-right: 5px;
+            }
+
+            .c-city-left {
+
+                &::before {
+                    content: '桃園市';
+                    display: inline-block;
+                    font-size: 14px;
+                    color: $brand-darkgray;
+                    letter-spacing: 1px;
+                    margin-right: 2px;
+                }
+
+                &::after {
+                    content: '八德區';
+                    display: inline-block;
+                    font-size: 14px;
+                    color: $brand-darkgray;
+                    letter-spacing: 1px;
+                }
+            }
+
+            .c-city-right {
+                display: inline-block;
+                font-size: 14px;
+                color: $brand-darkgray;
+                letter-spacing: 1px;
+
+                &::before {
+                    content: '-';
+                    display: inline-block;
+                    font-size: 14px;
+                    color: $brand-darkgray;
+                    letter-spacing: 1px;
+                    margin-right: 2px;
+                }
+
+                &::after {
+                    content: '公里';
+                    display: inline-block;
+                    font-size: 14px;
+                    color: $brand-darkgray;
+                    letter-spacing: 1px;
+                }
+
+                .c-r-km {
+                    font-size: 14px;
+                    color: $brand-darkgray;
+                    letter-spacing: 1px;
+                }
+            }
+        }
+
+        .f-c-t-text {
+            font-size: 24px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            line-height: 1.5;
+            text-decoration: none;
+            background: linear-gradient(to right, $brand-gold 0%, $brand-gold 100%);
+            background-size: 0 8%;
+            background-repeat: no-repeat;
+            background-position: left 100%;
+            transition-duration: .5s;
+            display: inline;
+            padding: 0;
+
+            @media screen and(max-width: $mobile) {
+                font-size: 20px;
+            }
+
+            &:hover {
+                background-size: 100% 8%;
+            }
+        }
+
+        .f-c-t-tag {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            @media screen and(max-width: $mobile) {
+                display: none;
+            }
+
+            .f-tag-btn {
+                margin-right: 10px;
+                font-size: 14px;
+                font-weight: 400;
+                letter-spacing: 1px;
+
+                &::before {
+                    content: "#";
+                }
+            }
+        }
+
+        .f-c-t-fast {
+            display: flex;
+            flex-direction: row;
+            margin-top: 5px;
+
+            @media screen and(max-width: $mobile) {
+                justify-content: space-between;
+            }
+
+            .fast-comment {
+                display: none;
+
+                &::after {
+                    content: '321則評論';
+                    font-size: 14px;
+                    letter-spacing: 1px;
+                }
+
+                @media screen and(max-width: $mobile) {
+                    display: block;
+                }
+            }
+
+            .fast-icon {
+                display: flex;
+                flex-direction: row;
+            }
+
+            .fast-one {
+                background-image: url(/image/foodpanda-logo.svg);
+                width: 80px;
+                height: 20px;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                margin-right: 5px;
+            }
+
+            .fast-two {
+                background-image: url(/image/ubereat-logo.svg);
+                width: 80px;
+                height: 20px;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+            }
+        }
+
+    }
+
+    .v-f-card-more {
+        flex-basis: 20%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 15px 30px 15px 0;
+        background-color: #fff;
+        border-bottom-right-radius: 30px;
+        border-top-right-radius: 30px;
+
+        @media screen and(max-width: $mobile) {
+            display: none;
+        }
+
+        .v-f-more-top {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-end;
+
+            .more-top-left {
+                display: flex;
+                flex-direction: column;
+                margin-right: 10px;
+            }
+
+            .m-t-l-mark {
+                font-weight: 500;
+                font-size: 16px;
+                letter-spacing: 1.5px;
+                text-align: end;
+            }
+
+            .m-t-l-comment {
+                font-size: 12px;
+                text-align: end;
+                letter-spacing: 1px;
+            }
+
+            .m-t-r-mark {
+                color: #fff;
+                background-color: $brand-gold;
+                padding: 10px;
+                border-radius: 50%;
+                font-size: 14px;
+                width: 100%;
+                height: 100%;
+                letter-spacing: 1px;
+                padding-right: 9px;
+            }
+        }
+
+        .v-f-more-bottom {
+            text-align: end;
+
+            .v-f-m-btn {
+                border: 1px solid $brand-darkgray;
+                letter-spacing: 1px;
+                font-size: 16px;
+                font-weight: 500;
+                padding: 5px 15px;
+                background-color: $brand-darkgray;
+                color: #fff;
+                border-radius: 10px;
+                text-align: end;
+            }
+        }
+    }
+}

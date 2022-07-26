@@ -29,6 +29,12 @@
           align-items: center;
 }
 
+@media screen and (max-width: 767px) {
+  .signin-container .signin-area {
+    background-color: rgba(48, 48, 48, 0.1);
+  }
+}
+
 .signin-container .signin-img {
   height: 100vh;
   width: 100%;
@@ -241,5 +247,69 @@
 
 .terms-policy .t-p-link {
   font-size: 12px;
+}
+
+.back-index {
+  position: fixed;
+  bottom: 5%;
+  right: 5%;
+  cursor: pointer;
+  z-index: 50;
+  width: 60px;
+  height: 60px;
+  -webkit-transition: .35s all;
+  transition: .35s all;
+}
+
+.back-index:hover {
+  -webkit-filter: brightness(1.1);
+          filter: brightness(1.1);
+}
+
+.back-index::before {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 60px;
+  background-image: url(/image/back_to_top.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  -webkit-animation: top 30s linear infinite;
+          animation: top 30s linear infinite;
+  z-index: -1;
+}
+
+@-webkit-keyframes top {
+  from {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  to {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+}
+
+@keyframes top {
+  from {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  to {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+}
+
+.back-index span {
+  font-size: 14px;
+  color: #fff;
+  letter-spacing: 1.5px;
+  line-height: 60px;
+  text-align: center;
+  padding-left: 1.5px;
+  font-weight: 500;
 }
 /*# sourceMappingURL=signin.css.map */

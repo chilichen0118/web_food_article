@@ -27,3 +27,28 @@ $(document).ready(function() {
 		 $("#nav-btn").click();
 	}, 1000)
 });
+
+$(window).scroll(function(){
+    if ($(document).scrollTop()>50) {
+        $('.header').addClass('h-change-color');
+    } else {
+        $('.header').removeClass('h-change-color');
+    }
+});
+
+// back to top
+var $backToTop = $(".back-btn");
+$backToTop.hide();
+
+
+$(window).on('scroll', function() {
+  if ($(this).scrollTop() > 300) {
+    $backToTop.fadeIn(1000);
+  } else {
+    $backToTop.fadeOut();
+  }
+});
+
+$backToTop.on('click', function(e) {
+  $("html, body").animate({scrollTop: 0}, 500);
+});

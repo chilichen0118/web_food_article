@@ -7,209 +7,817 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>食在心路</title>
 
-    <link rel="stylesheet" href="/SCSS/style.css">
+    <!-- 食在心路整體樣式 -->
+    <link rel="stylesheet" href="./css/style.css">
     <!-- bootstrap 5.1.1 -->
     <link rel="stylesheet" href="./css/bootstrap.css">
+    <!-- owl套件 -->
+    <link rel="stylesheet" href="./css/owl.carousel.css">
+    <!-- 首頁樣式 -->
+    <link rel="stylesheet" href="./css/home.css">
 </head>
 
 <body>
-    <header class="header">
-        <div class="container-fluid d-flex justify-content-center align-items-center">
-            <!-- LOGO -->
-            <div class="nav-left">
-                <div class="menu-logo">
-                    <a href="/index.html" class="navbar-logo">
-                        <img src="/image/logo.png" alt="食在心路">
-                    </a>
+
+    <!-- Header -->
+    <header>
+        <div class="header">
+            <div class="header-box w-100 d-flex justify-content-space-evenly align-items-center">
+                <!-- LOGO -->
+                <div class="nav-left">
+                    <div class="menu-logo">
+                        <a href="/index.html" class="navbar-logo">
+                            <img src="/image/logo.png" alt="食在心路">
+                        </a>
+                    </div>
                 </div>
-            </div>
 
-            <!-- 搜好食 & 找心路link -->
-            <div class="nav-right">
+                <!-- 搜好食 & 找心路link -->
+                <div class="nav-right">
 
-                <a href="" class="navbar-link">
-                    <span class="link-hover">搜好食</span>
-                </a>
-
-                <a href="" class="navbar-link">
-                    <span class="link-hover">找心路</span>
-                </a>
-
-            </div>
-            <!-- 饕客登入按鈕 -->
-            <div class="nav-right-signin d-inline-flex align-items-center">
-                <a href="/page/signin.html" id="sign-btn">
-                    <span class="nav-sign-btn">饕客登入</span>
-                </a>
-                <div id="account" class="d-none">
-                    <!-- 會員 -->
-                    <a href="" class="account-content">
-                        <!-- 會員頭像 -->
-                        <div id="account-img">
-                            <img src="/image/account.png" alt="會員頭像">
-                        </div>
-                        <!-- 會員名稱 -->
-                        <div class="account-text">
-                            <span id="account-name"></span>
-                        </div>
+                    <a href="/page/food.html" class="navbar-link">
+                        <span class="link-hover">搜好食</span>
                     </a>
-                    
+
+                    <a href="/page/article.html" class="navbar-link">
+                        <span class="link-hover">找心路</span>
+                    </a>
+
                 </div>
+                <!-- 饕客登入按鈕 -->
+                <div class="nav-right-signin d-inline-flex align-items-center">
+                    <a href="/page/signin.html" id="sign-btn">
+                        <span class="nav-sign-btn">饕客登入</span>
+                    </a>
+                    <div id="account" class="d-none">
+                        <!-- 會員 -->
+                        <a href="" class="account-content">
+                            <!-- 會員頭像 -->
+                            <div id="account-img">
+                                <img src="/image/account.png" alt="會員頭像">
+                            </div>
+                            <!-- 會員名稱 -->
+                            <div class="account-text">
+                                <span id="account-name"></span>
+                            </div>
+                        </a>
+
+                    </div>
+                </div>
+                <!-- 漢堡選單 -->
+                <div class="menu-btn">
+                    <button id="nav-btn" type="button">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+
+                <!-- 手機版MENU -->
+                <div id="nav-overlay"></div>
+                <nav class="wrapper">
+                    <ul id="nav-sign-area">
+                        <li class="nav-sign-item">
+                            <div class="nav-sign-text">
+                                <span>
+                                    登入後，掌握最新資訊！
+                                </span>
+                            </div>
+                            <a href="/page/signin.html" class="nav-sign-link">
+                                <span>登入&nbsp;|&nbsp;註冊</span>
+                            </a>
+
+                        </li>
+
+                        <li class="nav-member-title">
+                            <span class="menu-title">我的會員帳戶</span>
+                        </li>
+                        <li class="nav-member-item">
+                            <a href="" class="navbar-member-link nav-items">
+                                <div class="member-link-img">
+                                    <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd"
+                                        clip-rule="evenodd">
+                                        <path
+                                            d="M22 24h-17c-1.657 0-3-1.343-3-3v-18c0-1.657 1.343-3 3-3h17v24zm-2-4h-14.505c-1.375 0-1.375 2 0 2h14.505v-2zm0-18h-3v9l-2-1.547-2 1.547v-9h-8v16h15v-16z" />
+                                    </svg>
+                                </div>
+                                <div class="member-link-text">
+                                    <span class="nav-page">我的心路</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-member-item">
+                            <a href="" class="navbar-member-link nav-items">
+                                <div class="member-link-img">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                                        <path fill="none" d="M0 0h24v24H0z" />
+                                        <path
+                                            d="M5 2h14a1 1 0 0 1 1 1v19.143a.5.5 0 0 1-.766.424L12 18.03l-7.234 4.536A.5.5 0 0 1 4 22.143V3a1 1 0 0 1 1-1zm13 2H6v15.432l6-3.761 6 3.761V4z" />
+                                    </svg>
+                                </div>
+                                <div class="member-link-text">
+                                    <span class="nav-page">口袋清單</span>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li class="navbar-info-title">
+                            <span class="menu-title">資訊</span>
+                        </li>
+                        <li class="navbar-info-item">
+                            <a href="" class="navbar-info-link nav-items">
+                                <div class="info-link-img">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                                        <path fill="none" d="M0 0h24v24H0z" />
+                                        <path
+                                            d="M12 14v8H4a8 8 0 0 1 8-8zm0-1c-3.315 0-6-2.685-6-6s2.685-6 6-6 6 2.685 6 6-2.685 6-6 6zm9.446 7.032l1.504 1.504-1.414 1.414-1.504-1.504a4 4 0 1 1 1.414-1.414zM18 20a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" />
+                                    </svg>
+                                </div>
+                                <div class="info-link-text">
+                                    <span class="nav-page">客服中心</span>
+                                </div>
+                            </a>
+
+                        </li>
+                        <li class="navbar-info-item">
+                            <a href="" class="navbar-info-link nav-items">
+                                <div class="info-link-img">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                                        <path fill="none" d="M0 0h24v24H0z" />
+                                        <path
+                                            d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm-1-5h2v2h-2v-2zm2-1.645V14h-2v-1.5a1 1 0 0 1 1-1 1.5 1.5 0 1 0-1.471-1.794l-1.962-.393A3.501 3.501 0 1 1 13 13.355z" />
+                                    </svg>
+                                </div>
+                                <div class="info-link-text">
+                                    <span class="nav-page">常見問答</span>
+                                </div>
+                            </a>
+
+                        </li>
+
+
+                        <li class="navbar-info-item">
+                            <a href="" class="navbar-info-link nav-items">
+                                <div class="info-link-img">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                                        <path fill="none" d="M0 0h24v24H0z" />
+                                        <path
+                                            d="M3.783 2.826L12 1l8.217 1.826a1 1 0 0 1 .783.976v9.987a6 6 0 0 1-2.672 4.992L12 23l-6.328-4.219A6 6 0 0 1 3 13.79V3.802a1 1 0 0 1 .783-.976zM5 4.604v9.185a4 4 0 0 0 1.781 3.328L12 20.597l5.219-3.48A4 4 0 0 0 19 13.79V4.604L12 3.05 5 4.604zM12 11a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5zm-4.473 5a4.5 4.5 0 0 1 8.946 0H7.527z" />
+                                    </svg>
+                                </div>
+                                <div class="info-link-text">
+                                    <span class="nav-page">隱私政策</span>
+                                </div>
+                            </a>
+
+                        </li>
+
+
+                        <li class="navbar-info-item">
+                            <a href="" class="navbar-info-link nav-items">
+                                <div class="info-link-img">
+                                    <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd"
+                                        clip-rule="evenodd">
+                                        <path
+                                            d="M23.999 12.149c-.049 3.834-1.893 7.223-4.706 9.378-1.993 1.53-4.485 2.449-7.198 2.473-6.464.057-12.051-5.107-12.095-12 3.966 1.066 7.682-1.993 6-6 4.668.655 6.859-2.389 6.077-6 6.724.064 11.999 5.542 11.922 12.149zm-15.576-4.123c-.065 3.393-2.801 5.868-6.182 6.166 1.008 4.489 5.015 7.807 9.759 7.807 5.262 0 9.576-4.072 9.97-9.229.369-4.818-2.755-9.357-7.796-10.534-.277 2.908-2.381 5.357-5.751 5.79zm5.077 8.974c.828 0 1.5.672 1.5 1.5s-.672 1.5-1.5 1.5-1.5-.672-1.5-1.5.672-1.5 1.5-1.5zm-5.5-2.853c1.104 0 2 .896 2 2s-.896 2-2 2-2-.896-2-2 .896-2 2-2zm10-2.147c1.104 0 2 .896 2 2s-.896 2-2 2-2-.896-2-2 .896-2 2-2zm-5 0c.552 0 1 .448 1 1s-.448 1-1 1-1-.448-1-1 .448-1 1-1zm2.5-5c.828 0 1.5.672 1.5 1.5s-.672 1.5-1.5 1.5-1.5-.672-1.5-1.5.672-1.5 1.5-1.5zm-12.5 0c.552 0 1 .448 1 1s-.448 1-1 1-1-.448-1-1 .448-1 1-1zm-1.5-4c.828 0 1.5.672 1.5 1.5s-.672 1.5-1.5 1.5-1.5-.672-1.5-1.5.672-1.5 1.5-1.5zm6-2c.828 0 1.5.672 1.5 1.5s-.672 1.5-1.5 1.5-1.5-.672-1.5-1.5.672-1.5 1.5-1.5zm-3.5-1c.552 0 1 .448 1 1s-.448 1-1 1-1-.448-1-1 .448-1 1-1z" />
+                                    </svg>
+                                </div>
+                                <div class="info-link-text">
+                                    <span class="nav-page">cookie政策</span>
+                                </div>
+                            </a>
+
+                        </li>
+
+
+                        <li class="navbar-info-item">
+                            <a href="" class="navbar-info-link nav-items">
+
+                                <div class="info-link-img">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                        <path
+                                            d="M6 12h10v1h-10v-1zm7.816-3h-7.816v1h9.047c-.45-.283-.863-.618-1.231-1zm-7.816-2h6.5c-.134-.32-.237-.656-.319-1h-6.181v1zm13 3.975v2.568c0 4.107-6 2.457-6 2.457s1.518 6-2.638 6h-7.362v-20h9.5c.312-.749.763-1.424 1.316-2h-12.816v24h10.189c3.163 0 9.811-7.223 9.811-9.614v-3.886c-.623.26-1.297.421-2 .475zm4-6.475c0 2.485-2.015 4.5-4.5 4.5s-4.5-2.015-4.5-4.5 2.015-4.5 4.5-4.5 4.5 2.015 4.5 4.5zm-2.156-.882l-.696-.696-2.116 2.169-.992-.941-.696.697 1.688 1.637 2.812-2.866z" />
+                                    </svg>
+                                </div>
+                                <div class="info-link-text">
+                                    <span class="nav-page">服務條款</span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
             </div>
-            <!-- 漢堡選單 -->
-            <div class="menu-btn">
-                <button id="nav-btn" type="button">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </div>
-
-            <!-- 手機版MENU -->
-            <div id="nav-overlay"></div>
-            <nav class="wrapper">
-                <ul id="nav-sign-area">
-                    <li class="nav-sign-item">
-                        <div class="nav-sign-text">
-                            <span>
-                                登入後，掌握最新資訊！
-                            </span>
-                        </div>
-                        <a href="/page/signin.html" class="nav-sign-link">
-                            <span>登入&nbsp;|&nbsp;註冊</span>
-                        </a>
-
-                    </li>
-
-                    <li class="nav-member-title">
-                        <span class="menu-title">我的會員帳戶</span>
-                    </li>
-                    <li class="nav-member-item">
-                        <a href="" class="navbar-member-link nav-items">
-                            <div class="member-link-img">
-                                <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd"
-                                    clip-rule="evenodd">
-                                    <path
-                                        d="M22 24h-17c-1.657 0-3-1.343-3-3v-18c0-1.657 1.343-3 3-3h17v24zm-2-4h-14.505c-1.375 0-1.375 2 0 2h14.505v-2zm0-18h-3v9l-2-1.547-2 1.547v-9h-8v16h15v-16z" />
-                                </svg>
-                            </div>
-                            <div class="member-link-text">
-                                <span class="nav-page">我的心路</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="nav-member-item">
-                        <a href="" class="navbar-member-link nav-items">
-                            <div class="member-link-img">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-                                    <path fill="none" d="M0 0h24v24H0z" />
-                                    <path
-                                        d="M5 2h14a1 1 0 0 1 1 1v19.143a.5.5 0 0 1-.766.424L12 18.03l-7.234 4.536A.5.5 0 0 1 4 22.143V3a1 1 0 0 1 1-1zm13 2H6v15.432l6-3.761 6 3.761V4z" />
-                                </svg>
-                            </div>
-                            <div class="member-link-text">
-                                <span class="nav-page">口袋清單</span>
-                            </div>
-                        </a>
-                    </li>
-
-                    <li class="navbar-info-title">
-                        <span class="menu-title">資訊</span>
-                    </li>
-                    <li class="navbar-info-item">
-                        <a href="" class="navbar-info-link nav-items">
-                            <div class="info-link-img">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-                                    <path fill="none" d="M0 0h24v24H0z" />
-                                    <path
-                                        d="M12 14v8H4a8 8 0 0 1 8-8zm0-1c-3.315 0-6-2.685-6-6s2.685-6 6-6 6 2.685 6 6-2.685 6-6 6zm9.446 7.032l1.504 1.504-1.414 1.414-1.504-1.504a4 4 0 1 1 1.414-1.414zM18 20a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" />
-                                </svg>
-                            </div>
-                            <div class="info-link-text">
-                                <span class="nav-page">客服中心</span>
-                            </div>
-                        </a>
-
-                    </li>
-                    <li class="navbar-info-item">
-                        <a href="" class="navbar-info-link nav-items">
-                            <div class="info-link-img">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-                                    <path fill="none" d="M0 0h24v24H0z" />
-                                    <path
-                                        d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm-1-5h2v2h-2v-2zm2-1.645V14h-2v-1.5a1 1 0 0 1 1-1 1.5 1.5 0 1 0-1.471-1.794l-1.962-.393A3.501 3.501 0 1 1 13 13.355z" />
-                                </svg>
-                            </div>
-                            <div class="info-link-text">
-                                <span class="nav-page">常見問答</span>
-                            </div>
-                        </a>
-
-                    </li>
-
-
-                    <li class="navbar-info-item">
-                        <a href="" class="navbar-info-link nav-items">
-                            <div class="info-link-img">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-                                    <path fill="none" d="M0 0h24v24H0z" />
-                                    <path
-                                        d="M3.783 2.826L12 1l8.217 1.826a1 1 0 0 1 .783.976v9.987a6 6 0 0 1-2.672 4.992L12 23l-6.328-4.219A6 6 0 0 1 3 13.79V3.802a1 1 0 0 1 .783-.976zM5 4.604v9.185a4 4 0 0 0 1.781 3.328L12 20.597l5.219-3.48A4 4 0 0 0 19 13.79V4.604L12 3.05 5 4.604zM12 11a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5zm-4.473 5a4.5 4.5 0 0 1 8.946 0H7.527z" />
-                                </svg>
-                            </div>
-                            <div class="info-link-text">
-                                <span class="nav-page">隱私政策</span>
-                            </div>
-                        </a>
-
-                    </li>
-
-
-                    <li class="navbar-info-item">
-                        <a href="" class="navbar-info-link nav-items">
-                            <div class="info-link-img">
-                                <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd"
-                                    clip-rule="evenodd">
-                                    <path
-                                        d="M23.999 12.149c-.049 3.834-1.893 7.223-4.706 9.378-1.993 1.53-4.485 2.449-7.198 2.473-6.464.057-12.051-5.107-12.095-12 3.966 1.066 7.682-1.993 6-6 4.668.655 6.859-2.389 6.077-6 6.724.064 11.999 5.542 11.922 12.149zm-15.576-4.123c-.065 3.393-2.801 5.868-6.182 6.166 1.008 4.489 5.015 7.807 9.759 7.807 5.262 0 9.576-4.072 9.97-9.229.369-4.818-2.755-9.357-7.796-10.534-.277 2.908-2.381 5.357-5.751 5.79zm5.077 8.974c.828 0 1.5.672 1.5 1.5s-.672 1.5-1.5 1.5-1.5-.672-1.5-1.5.672-1.5 1.5-1.5zm-5.5-2.853c1.104 0 2 .896 2 2s-.896 2-2 2-2-.896-2-2 .896-2 2-2zm10-2.147c1.104 0 2 .896 2 2s-.896 2-2 2-2-.896-2-2 .896-2 2-2zm-5 0c.552 0 1 .448 1 1s-.448 1-1 1-1-.448-1-1 .448-1 1-1zm2.5-5c.828 0 1.5.672 1.5 1.5s-.672 1.5-1.5 1.5-1.5-.672-1.5-1.5.672-1.5 1.5-1.5zm-12.5 0c.552 0 1 .448 1 1s-.448 1-1 1-1-.448-1-1 .448-1 1-1zm-1.5-4c.828 0 1.5.672 1.5 1.5s-.672 1.5-1.5 1.5-1.5-.672-1.5-1.5.672-1.5 1.5-1.5zm6-2c.828 0 1.5.672 1.5 1.5s-.672 1.5-1.5 1.5-1.5-.672-1.5-1.5.672-1.5 1.5-1.5zm-3.5-1c.552 0 1 .448 1 1s-.448 1-1 1-1-.448-1-1 .448-1 1-1z" />
-                                </svg>
-                            </div>
-                            <div class="info-link-text">
-                                <span class="nav-page">cookie政策</span>
-                            </div>
-                        </a>
-
-                    </li>
-
-
-                    <li class="navbar-info-item">
-                        <a href="" class="navbar-info-link nav-items">
-
-                            <div class="info-link-img">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                                    <path
-                                        d="M6 12h10v1h-10v-1zm7.816-3h-7.816v1h9.047c-.45-.283-.863-.618-1.231-1zm-7.816-2h6.5c-.134-.32-.237-.656-.319-1h-6.181v1zm13 3.975v2.568c0 4.107-6 2.457-6 2.457s1.518 6-2.638 6h-7.362v-20h9.5c.312-.749.763-1.424 1.316-2h-12.816v24h10.189c3.163 0 9.811-7.223 9.811-9.614v-3.886c-.623.26-1.297.421-2 .475zm4-6.475c0 2.485-2.015 4.5-4.5 4.5s-4.5-2.015-4.5-4.5 2.015-4.5 4.5-4.5 4.5 2.015 4.5 4.5zm-2.156-.882l-.696-.696-2.116 2.169-.992-.941-.696.697 1.688 1.637 2.812-2.866z" />
-                                </svg>
-                            </div>
-                            <div class="info-link-text">
-                                <span class="nav-page">服務條款</span>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-            </nav>
 
         </div>
-
     </header>
 
+    <!-- search bar -->
+    <div class="home-group container-fluid">
+        <!-- <div class="home-search-bg"></div> -->
+        <div class="container home-search">
+            <div class="search">
 
+                <!-- 選擇 搜好食 or 找心路 -->
+                <div id="search-nav">
+                    <ul class="search-title">
+                        <li id="search-food" class="s-t-btn" rel="search-A">
+                            <span id="s_f_title" class="d-inline-block search-options s-o-active">
+                                搜好食
+                            </span>
+                        </li>
+                        <li id="search-article" class="s-t-btn" rel="search-B">
+                            <span id="s_a_title" class="d-inline-block search-options">
+                                找心路
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 搜好食 & 找心路 內容 -->
+                <div id="search_content">
+                    <!-- 搜好食 -->
+                    <div id="search-A" class="collapse">
+                        <form action="" class="search-box">
+                            <!-- 輸入美食 與 地址 -->
+                            <div class="search-text">
+                                <div class="s-t-food">
+                                    <input type="search" id="search-text-food" class="s-search-style"
+                                        placeholder="想吃什麼">
+                                </div>
+                                <div class="s-t-city">
+                                    <input type="search" name="city" id="search-text-city" class="s-search-style"
+                                        placeholder="輸入目的地">
+                                </div>
+                            </div>
+
+                            <!-- 選擇熱搜美食 -->
+                            <div class="search-popular">
+                                <div class="s-title">
+                                    <legend class="s-text">熱門搜尋：</legend>
+                                </div>
+                                <div class="s-group">
+                                    <label for="search-popular-one" class="search-popular-btn">
+                                        <input type="checkbox" name="search-food" id="search-popular-one">
+                                        <span class="s-food s-choice-btn-style">燒烤</span>
+                                    </label>
+                                    <label for="search-popular-two" class="search-popular-btn">
+                                        <input type="checkbox" name="search-food" id="search-popular-two">
+                                        <span class="s-food s-choice-btn-style">火鍋</span>
+                                    </label>
+                                    <label for="search-popular-three" class="search-popular-btn">
+                                        <input type="checkbox" name="search-food" id="search-popular-three">
+                                        <span class="s-food s-choice-btn-style">乾麵</span>
+                                    </label>
+                                    <label for="search-popular-four" class="search-popular-btn">
+                                        <input type="checkbox" name="search-food" id="search-popular-four">
+                                        <span class="s-food s-choice-btn-style">牛肉麵</span>
+                                    </label>
+                                    <label for="search-popular-five" class="search-popular-btn">
+                                        <input type="checkbox" name="search-food" id="search-popular-five">
+                                        <span class="s-food s-choice-btn-style">鹽酥雞</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <!-- 選擇星級評價 -->
+                            <div class="search-star">
+                                <div class="s-title">
+                                    <legend class="s-text">評分：</legend>
+                                </div>
+                                <div class="s-group">
+                                    <label class="stars" for="star-one">
+                                        <input class="stat-icon" type="radio" name="star" id="star-one">
+                                        <div class="star-btn s-choice-btn-style">
+                                            <div class="star-img">
+                                            </div>
+                                            <div class="star-text">
+                                                <span class="star-number">1</span>
+                                            </div>
+                                        </div>
+                                    </label>
+                                    <label class="stars" for="star-two">
+                                        <input class="stat-icon" type="radio" name="star" id="star-two">
+                                        <div class="star-btn s-choice-btn-style">
+                                            <div class="star-img">
+                                            </div>
+                                            <div class="star-text">
+                                                <span class="star-number">2</span>
+                                            </div>
+                                        </div>
+                                    </label>
+                                    <label class="stars" for="star-three">
+                                        <input class="stat-icon" type="radio" name="star" id="star-three">
+                                        <div class="star-btn s-choice-btn-style">
+                                            <div class="star-img">
+                                            </div>
+                                            <div class="star-text">
+                                                <span class="star-number">3</span>
+                                            </div>
+                                        </div>
+                                    </label>
+                                    <label class="stars" for="star-four">
+                                        <input class="stat-icon" type="radio" name="star" id="star-four">
+                                        <div class="star-btn s-choice-btn-style">
+                                            <div class="star-img">
+                                            </div>
+                                            <div class="star-text">
+                                                <span class="star-number">4</span>
+                                            </div>
+                                        </div>
+                                    </label>
+                                    <label class="stars" for="star-five">
+                                        <input class="stat-icon" type="radio" name="star" id="star-five">
+                                        <div class="star-btn s-choice-btn-style">
+                                            <div class="star-img">
+                                            </div>
+                                            <div class="star-text">
+                                                <span class="star-number">5</span>
+                                            </div>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="search-big-btn">
+                                <input class="big-search big-food-search" type="submit" value="搜出美味">
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- 找心路 -->
+                    <div id="search-B" class="collapse">
+                        <form action="" class="search-box">
+                            <!-- 輸入框 -->
+                            <div class="search-text">
+                                <div class="s-t-article">
+                                    <input type="search" id="search-text-article" class="s-search-style"
+                                        placeholder="請輸入關鍵字">
+                                </div>
+                            </div>
+                            <!-- 熱搜 -->
+                            <div class="search-class">
+                                <div class="s-title">
+                                    <legend class="s-text">熱門搜尋：</legend>
+                                </div>
+                                <div class="s-group">
+                                    <label for="search-class-one" class="search-class-btn">
+                                        <input type="checkbox" name="search-article" id="search-class-one">
+                                        <span class="s-class s-choice-btn-style">季節限定</span>
+                                    </label>
+                                    <label for="search-class-two" class="search-class-btn">
+                                        <input type="checkbox" name="search-article" id="search-class-two">
+                                        <span class="s-class s-choice-btn-style">達人推薦</span>
+                                    </label>
+                                    <label for="search-class-three" class="search-class-btn">
+                                        <input type="checkbox" name="search-article" id="search-class-three">
+                                        <span class="s-class s-choice-btn-style">好康分享</span>
+                                    </label>
+                                    <label for="search-class-four" class="search-class-btn">
+                                        <input type="checkbox" name="search-article" id="search-class-four">
+                                        <span class="s-class s-choice-btn-style">在地小吃</span>
+                                    </label>
+                                    <label for="search-class-five" class="search-class-btn">
+                                        <input type="checkbox" name="search-article" id="search-class-five">
+                                        <span class="s-class s-choice-btn-style">美食情報</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <!-- 排版用隱藏選擇星級評價 -->
+                            <div class="search-star s-t-hide">
+                                <div class="s-title">
+                                    <legend class="s-text">評分：</legend>
+                                </div>
+                                <div class="s-group">
+                                    <label class="stars" for="star-one">
+                                        <input class="stat-icon" type="radio" name="star" id="star-one">
+                                        <div class="star-btn s-choice-btn-style">
+                                            <div class="star-img">
+                                            </div>
+                                            <div class="star-text">
+                                                <span class="star-number">1</span>
+                                            </div>
+                                        </div>
+                                    </label>
+                                    <label class="stars" for="star-two">
+                                        <input class="stat-icon" type="radio" name="star" id="star-two">
+                                        <div class="star-btn s-choice-btn-style">
+                                            <div class="star-img">
+                                            </div>
+                                            <div class="star-text">
+                                                <span class="star-number">2</span>
+                                            </div>
+                                        </div>
+                                    </label>
+                                    <label class="stars" for="star-three">
+                                        <input class="stat-icon" type="radio" name="star" id="star-three">
+                                        <div class="star-btn s-choice-btn-style">
+                                            <div class="star-img">
+                                            </div>
+                                            <div class="star-text">
+                                                <span class="star-number">3</span>
+                                            </div>
+                                        </div>
+                                    </label>
+                                    <label class="stars" for="star-four">
+                                        <input class="stat-icon" type="radio" name="star" id="star-four">
+                                        <div class="star-btn s-choice-btn-style">
+                                            <div class="star-img">
+                                            </div>
+                                            <div class="star-text">
+                                                <span class="star-number">4</span>
+                                            </div>
+                                        </div>
+                                    </label>
+                                    <label class="stars" for="star-five">
+                                        <input class="stat-icon" type="radio" name="star" id="star-five">
+                                        <div class="star-btn s-choice-btn-style">
+                                            <div class="star-img">
+                                            </div>
+                                            <div class="star-text">
+                                                <span class="star-number">5</span>
+                                            </div>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="search-big-btn">
+                                <input type="submit" class="big-search big-article-search" value="搜尋相關文章">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- 熱門城市 -->
+    <div class="container my-5">
+        <!-- 標題 -->
+        <div class="row home-title-area cloud-area">
+            <!-- 背景雲 -->
+            <div class="cloud-1">
+            </div>
+            <div class="cloud-2">
+            </div>
+            <div class="cloud-3">
+            </div>
+            <div class="container d-flex justify-content-center align-items-end">
+                <div class="b-dot"></div>
+                <div class="h-title-content">
+                    <div class="h-t-c-icon h-t-c-i-map">
+                    </div>
+                    <div class="h-t-c-title">
+                        <h2 class="home-title">
+                            熱門城市
+                        </h2>
+                    </div>
+                </div>
+                <div class="b-dot"></div>
+            </div>
+        </div>
+        <!-- 內容 -->
+        <div class="container home-popular-town w-100">
+            <div class="town-link owl-carousel">
+                <a href="" class="popular-town-box item">
+                    <div class="town-circle">
+                        <div id="t-c-img-1" class="t-c-img"></div>
+                        <svg viewBox="0 0 100 100">
+                            <path d="M 0,50 a 50,50 0 1,1 0,1 z" id="circle_path" />
+                            <text class="text-path">
+                                <textPath xlink:href="#circle_path" class="t-c-text">
+                                    &emsp;\ 386間好食 /
+                                </textPath>
+                            </text>
+                            <path d="M 0,50 a 50,50 0 1,1 0,1 z" id="dash" />
+                        </svg>
+                    </div>
+                    <div class="town-title">
+                        <span class="town-text d-block">台北市</span>
+                    </div>
+                </a>
+
+                <a href="" class="popular-town-box item">
+                    <div class="town-circle">
+                        <div id="t-c-img-2" class="t-c-img"></div>
+                        <svg viewBox="0 0 100 100">
+                            <path d="M 0,50 a 50,50 0 1,1 0,1 z" id="circle_path" />
+                            <text class="text-path">
+                                <textPath xlink:href="#circle_path" class="t-c-text">
+                                    &emsp;\ 215間好食 /
+                                </textPath>
+                            </text>
+                            <path d="M 0,50 a 50,50 0 1,1 0,1 z" id="dash" />
+                        </svg>
+                    </div>
+                    <div class="town-title">
+                        <span class="town-text d-block">臺南市</span>
+                    </div>
+                </a>
+
+                <a href="" class="popular-town-box item">
+                    <div class="town-circle">
+                        <div id="t-c-img-3" class="t-c-img"></div>
+                        <svg viewBox="0 0 100 100">
+                            <path d="M 0,50 a 50,50 0 1,1 0,1 z" id="circle_path" />
+                            <text class="text-path">
+                                <textPath xlink:href="#circle_path" class="t-c-text">
+                                    &emsp;\ 328間好食 /
+                                </textPath>
+                            </text>
+                            <path d="M 0,50 a 50,50 0 1,1 0,1 z" id="dash" />
+                        </svg>
+                    </div>
+                    <div class="town-title">
+                        <span class="town-text d-block">台中市</span>
+                    </div>
+                </a>
+
+                <a href="" class="popular-town-box item">
+                    <div class="town-circle">
+                        <div id="t-c-img-4" class="t-c-img"></div>
+                        <svg viewBox="0 0 100 100">
+                            <path d="M 0,50 a 50,50 0 1,1 0,1 z" id="circle_path" />
+                            <text class="text-path">
+                                <textPath xlink:href="#circle_path" class="t-c-text">
+                                    &emsp;\ 246間好食 /
+                                </textPath>
+                            </text>
+                            <path d="M 0,50 a 50,50 0 1,1 0,1 z" id="dash" />
+                        </svg>
+                    </div>
+                    <div class="town-title">
+                        <span class="town-text d-block">新北市</span>
+                    </div>
+                </a>
+
+                <a href="" class="popular-town-box item">
+                    <div class="town-circle">
+                        <div id="t-c-img-5" class="t-c-img"></div>
+                        <svg viewBox="0 0 100 100">
+                            <path d="M 0,50 a 50,50 0 1,1 0,1 z" id="circle_path" />
+                            <text class="text-path">
+                                <textPath xlink:href="#circle_path" class="t-c-text">
+                                    &emsp;\ 278間好食 /
+                                </textPath>
+                            </text>
+                            <path d="M 0,50 a 50,50 0 1,1 0,1 z" id="dash" />
+                        </svg>
+                    </div>
+                    <div class="town-title">
+                        <span class="town-text d-block">高雄市</span>
+                    </div>
+                </a>
+            </div>
+
+            <div class="owl-dots"></div>
+
+        </div>
+    </div>
+
+    <!-- 推薦好食 -->
+    <div class="container-fluid home-food-bg-dot">
+        <div class="container">
+            <!-- 標題 -->
+            <div class="row home-title-area cloud-area">
+                <div class="container d-flex justify-content-center align-items-end">
+                    <div class="b-dot"></div>
+                    <div class="h-title-content">
+                        <div class="h-t-c-icon h-t-c-i-food">
+                        </div>
+                        <div class="h-t-c-title">
+                            <h2 class="home-title">
+                                推薦好食
+                            </h2>
+                        </div>
+                    </div>
+                    <div class="b-dot"></div>
+                </div>
+            </div>
+        </div>
+        <!-- 內容 -->
+        <div class="container home-recommend-food">
+            <div class="recommend-food-box">
+                <div class="food-card">
+                    <a href="/food_page/food_1.html" class="f-card-img d-block">
+                        <!-- 商家圖片大小250*280px -->
+                        <div class="r-food-img">
+                            <img src="/image/home-food-img-4.jpg" alt="">
+                        </div>
+                    </a>
+                    <div class="f-card-text">
+                        <div class="r-food-content">
+                            <a href="/food_page/food_1.html" class="r-food-content-box d-flex justify-content-center align-items-center">
+                                <!-- 商家名稱上限20字以內 -->
+                                <h3 class="r-f-title">小倆口私房菜</h3>
+                                <div class="d-block">
+                                    <span class="r-f-review d-block">325則評論</span>
+                                </div>
+                                <div class="r-f-score d-flex justify-content-center align-items-center">
+                                    <span class="r-f-star d-block">
+                                    </span>
+                                    <span class="r-f-number d-block">4.8</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="recommend-food-box">
+                <div class="food-card">
+                    <a href="/food_page/food_2.html" class="f-card-img d-block">
+                        <!-- 商家圖片大小250*280px -->
+                        <div class="r-food-img">
+                            <img src="/image/home-food-img-2.jpg" alt="">
+                        </div>
+                    </a>
+                    <div class="f-card-text">
+                        <div class="r-food-content">
+                            <a href="/food_page/food_2.html" class="r-food-content-box d-flex justify-content-center align-items-center">
+                                <!-- 商家名稱上限20字以內 -->
+                                <h3 class="r-f-title">滿福堂</h3>
+                                <div class="d-block">
+                                    <span class="r-f-review d-block">275則評論</span>
+                                </div>
+                                <div class="r-f-score d-flex justify-content-center align-items-center">
+                                    <span class="r-f-star d-block">
+                                    </span>
+                                    <span class="r-f-number d-block">5.0</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="recommend-food-box">
+                <div class="food-card">
+                    <a href="/food_page/food_3.html" class="f-card-img d-block">
+                        <!-- 商家圖片大小250*280px -->
+                        <div class="r-food-img">
+                            <img src="/image/home-food-img-1.jpg" alt="">
+                        </div>
+                    </a>
+                    <div class="f-card-text">
+                        <div class="r-food-content">
+                            <a href="/food_page/food_3.html" class="r-food-content-box d-flex justify-content-center align-items-center">
+                                <!-- 商家名稱上限20字以內 -->
+                                <h3 class="r-f-title">創意餃子館</h3>
+                                <div class="d-block">
+                                    <span class="r-f-review d-block">203則評論</span>
+                                </div>
+                                <div class="r-f-score d-flex justify-content-center align-items-center">
+                                    <span class="r-f-star d-block">
+                                    </span>
+                                    <span class="r-f-number d-block">4.2</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="recommend-food-box">
+                <div class="food-card">
+                    <a href="/food_page/food_4.html" class="f-card-img d-block">
+                        <!-- 商家圖片大小250*280px -->
+                        <div class="r-food-img">
+                            <img src="/image/home-food-img-3.jpg" alt="">
+                        </div>
+                    </a>
+                    <div class="f-card-text">
+                        <div class="r-food-content">
+                            <a href="/food_page/food_4.html" class="r-food-content-box d-flex justify-content-center align-items-center">
+                                <!-- 商家名稱上限20字以內 -->
+                                <h3 class="r-f-title">35號義式廚房</h3>
+                                <div class="d-block">
+                                    <span class="r-f-review d-block">286則評論</span>
+                                </div>
+                                <div class="r-f-score d-flex justify-content-center align-items-center">
+                                    <span class="r-f-star d-block">
+                                    </span>
+                                    <span class="r-f-number d-block">4.3</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 推薦好文 -->
+    <div class="container-fluid home-article-bg-line">
+        <div class="container">
+            <!-- 標題 -->
+            <div class="row home-title-area cloud-area">
+                <div class="container d-flex justify-content-center align-items-end">
+                    <div class="b-dot"></div>
+                    <div class="h-title-content">
+                        <div class="h-t-c-icon h-t-c-i-food">
+                        </div>
+                        <div class="h-t-c-title">
+                            <h2 class="home-title">
+                                推薦好文
+                            </h2>
+                        </div>
+                    </div>
+                    <div class="b-dot"></div>
+                </div>
+            </div>
+        </div>
+        <!-- 內文 -->
+        <div class="container home-recommend-article">
+            <div class="recommend-article-box">
+                <div class="article-card d-flex">
+                    <!-- 文章圖片大小250*250px -->
+                    <a href="/article_page/article_1.html" class="article-img d-block">
+                        <img src="/image/article-card-1.jpg" alt="">
+                    </a>
+                    <a href="/article_page/article_1.html" class="article-class d-block">
+                        <span class="a-c-line d-inline-block">\</span>
+                        <div class="a-c-text d-inline-block">達人推薦</div>
+                        <span class="a-c-line d-inline-block">/</span>
+                    </a>
+                    <a href="article_page/article_1.html" class="article-title d-block w-100">
+                        <div class="a-t-area d-flex align-items-center">
+                            <div class="a-t-text">美食舌尖達人帶你探索新北職人手作料理</div>
+                            <span class="a-t-date d-block">2022.07.01</span>
+                        </div>
+                    </a>
+                    <div class="article-writer">
+                        <span class="a-w-name">好食小編</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="recommend-article-box">
+                <div class="article-card d-flex">
+                    <!-- 文章圖片大小250*250px -->
+                    <a href="/article_page/article_2.html" class="article-img d-block">
+                        <img src="/image/article-card-2.jpg" alt="">
+                    </a>
+                    <a href="/article_page/article_2.html" class="article-class d-block">
+                        <span class="a-c-line d-inline-block">\</span>
+                        <div class="a-c-text d-inline-block">季節限定</div>
+                        <span class="a-c-line d-inline-block">/</span>
+                    </a>
+                    <a href="/article_page/article_2.html" class="article-title d-block w-100">
+                        <div class="a-t-area d-flex align-items-center">
+                            <div class="a-t-text">夏天就是要吃芒果！清涼消暑特輯</div>
+                            <span class="a-t-date d-block">2022.06.30</span>
+                        </div>
+                    </a>
+                    <div class="article-writer">
+                        <span class="a-w-name">好食小編</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="recommend-article-box">
+                <div class="article-card d-flex">
+                    <!-- 文章圖片大小250*250px -->
+                    <a href="/article_page/article_3.html" class="article-img d-block">
+                        <img src="/image/article-card-3.jpg" alt="">
+                    </a>
+                    <a href="/article_page/article_3.html" class="article-class d-block">
+                        <span class="a-c-line d-inline-block">\</span>
+                        <div class="a-c-text d-inline-block">美食情報</div>
+                        <span class="a-c-line d-inline-block">/</span>
+                    </a>
+                    <a href="/article_page/article_3.html" class="article-title d-block w-100">
+                        <div class="a-t-area d-flex align-items-center">
+                            <div class="a-t-text">七夕情人節巧克力甜點推薦 | 精選TOP5 熱門店家</div>
+                            <span class="a-t-date d-block">2022.06.28</span>
+                        </div>
+                    </a>
+                    <div class="article-writer">
+                        <span class="a-w-name">好食小編</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="back-btn"><span class="d-block">TOP</span></div>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="container-fluid w-100 text-align-center">
+            <span class="copyright text-align-center d-block">
+                copyright&ensp;&copy;&ensp;一扇門數位工作室&ensp;2022
+            </span>
+        </div>
+    </footer>
 
     <!-- jquery 3.6.0 -->
     <script src="./js/jquery-3.6.0.js"></script>
     <!-- bootstrap 5.1.1 -->
     <script src="./js/bootstrap.bundle.js"></script>
+    <script src="/js/owl.carousel.js"></script>
     <script src="./js/main.js"></script>
+    <script src="./js/home.js"></script>
 </body>
 
 </html>
