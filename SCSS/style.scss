@@ -368,6 +368,21 @@ header {
         }
     }
 
+    .nav-food-item,.nav-article-item {
+        margin: 15px 0 5px;
+
+        .member-link-img::before {
+            content: '';
+            display: block;
+            background-image: url(../image/dot.svg);
+            width: 24px;
+            height: 24px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin-right: 10px;
+        }
+    }
+
     .nav-member-title,
     .navbar-info-title {
         margin-top: 16px;

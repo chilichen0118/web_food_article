@@ -436,6 +436,21 @@ header {
   color: #fff;
 }
 
+.wrapper .nav-food-item, .wrapper .nav-article-item {
+  margin: 15px 0 5px;
+}
+
+.wrapper .nav-food-item .member-link-img::before, .wrapper .nav-article-item .member-link-img::before {
+  content: '';
+  display: block;
+  background-image: url(../image/dot.svg);
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-right: 10px;
+}
+
 .wrapper .nav-member-title,
 .wrapper .navbar-info-title {
   margin-top: 16px;
