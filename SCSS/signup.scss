@@ -17,7 +17,7 @@ $mobile: 767px;
 
     @media screen and(max-width: $mobile) {
         grid-template-columns: 100%;
-        background-image: url(/image/signup.jpg);
+        background-image: url(../image/signup.jpg);
         background-position: center;
         background-size: cover;
     }
@@ -35,7 +35,7 @@ $mobile: 767px;
     .signup-img {
         height: 100%;
         width: 100%;
-        background-image: url(/image/signup.jpg);
+        background-image: url(../image/signup.jpg);
         background-size: cover;
         background-position: center;
 
@@ -397,7 +397,7 @@ $mobile: 767px;
         display: block;
         width: 60px;
         height: 60px;
-        background-image: url(/image/back_to_top.svg);
+        background-image: url(../image/back_to_top.svg);
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
