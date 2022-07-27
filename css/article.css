@@ -205,6 +205,10 @@
   font-size: 16px;
 }
 
+.search-article-filter .s-a-f-btn .s-a-f-button:focus {
+  outline: none !important;
+}
+
 @media screen and (max-width: 767px) {
   .search-article-filter .s-a-f-btn .s-a-f-button {
     font-size: 14px;

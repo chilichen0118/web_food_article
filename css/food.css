@@ -218,6 +218,10 @@
   margin-right: 15px;
 }
 
+.search-food-filter .s-f-f-btn .s-f-f-button:focus {
+  outline: none !important;
+}
+
 @media screen and (max-width: 767px) {
   .search-food-filter .s-f-f-btn .s-f-f-button {
     font-size: 14px;

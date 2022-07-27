@@ -1528,6 +1528,11 @@ body {
 
         &:hover .a-t-area {
             background-image: url(../image/gold-pot.svg);
+
+            @media screen and (max-width: $mobile) {
+                width: 100%;
+                height: 130px;
+            }
         }
     }
 
@@ -1540,6 +1545,7 @@ body {
 
         @media screen and (max-width: $mobile) {
             padding: 0 10px;
+            justify-content: space-evenly;
         }
     }
 
@@ -1550,6 +1556,10 @@ body {
         transform: translateY(100px);
         z-index: 1;
         transition: .3s ease-out;
+
+        @media screen and (max-width: $mobile) {
+            transform: translateY(120px);
+        }
 
         img {
             width: 100%;
@@ -1619,7 +1629,7 @@ body {
 
         @media screen and (max-width: $mobile) {
             height: 130px;
-            width: 80%;
+            width: 100%;
         }
 
         .a-t-text {
@@ -1628,6 +1638,9 @@ body {
             font-weight: 500;
             letter-spacing: 2px;
             text-align: center;
+            @media screen and (max-width: $mobile) {
+                width: 80%;
+            }
         }
 
         .a-t-date {
