@@ -38,7 +38,7 @@ body {
 
     &::before {
         content: '';
-        background-image: url(/image/search_background.svg);
+        background-image: url(./image/search_background.svg);
         width: 100%;
         height: 150%;
         background-size: contain;
@@ -186,7 +186,7 @@ body {
                 border-radius: 30px;
                 border: 1.5px solid $brand-gray;
                 background-color: $brand-lightgray;
-                background-image: url(/image/search-line.svg);
+                background-image: url(./image/search-line.svg);
                 background-repeat: no-repeat;
                 background-position: 15px center;
                 transform-origin: 50% 50%;
@@ -218,7 +218,7 @@ body {
 
                 &::-webkit-search-cancel-button {
                     appearance: none;
-                    background-image: url(/image/close-fill.svg);
+                    background-image: url(./image/close-fill.svg);
                     background-size: contain;
                     height: 24px;
                     width: 24px;
@@ -299,7 +299,7 @@ body {
                 .star-img {
                     width: 20px;
                     height: 20px;
-                    background-image: url(/image/iconmonstr-star-filled.svg);
+                    background-image: url(./image/iconmonstr-star-filled.svg);
                     background-size: cover;
                     background-position: center center;
                     margin-right: 10px;
@@ -324,7 +324,7 @@ body {
             }
 
             input:checked+.star-btn>.star-img {
-                background-image: url(/image/iconmonstr-star-filled-white-01.svg);
+                background-image: url(./image/iconmonstr-star-filled-white-01.svg);
             }
 
             input:checked+.star-btn>.star-text>.star-number {
@@ -571,7 +571,7 @@ body {
 //                                 border-radius: 30px;
 //                                 border: 1.5px solid $brand-gray;
 //                                 background-color: $brand-lightgray;
-//                                 background-image: url(/image/search-line.svg);
+//                                 background-image: url(./image/search-line.svg);
 //                                 background-repeat: no-repeat;
 //                                 background-position: 15px center;
 //                                 transform-origin: 50% 50%;
@@ -594,7 +594,7 @@ body {
 
 //                                 &::-webkit-search-cancel-button {
 //                                     appearance: none;
-//                                     background-image: url(/image/close-fill.svg);
+//                                     background-image: url(./image/close-fill.svg);
 //                                     background-size: contain;
 //                                     height: 24px;
 //                                     width: 24px;
@@ -630,7 +630,7 @@ body {
 //                                 border-radius: 30px;
 //                                 border: 1.5px solid $brand-gray;
 //                                 background-color: $brand-lightgray;
-//                                 background-image: url(/image/search-line.svg);
+//                                 background-image: url(./image/search-line.svg);
 //                                 background-repeat: no-repeat;
 //                                 background-position: 15px center;
 //                                 transform-origin: 50% 50%;
@@ -654,7 +654,7 @@ body {
 
 //                                 &::-webkit-search-cancel-button {
 //                                     appearance: none;
-//                                     background-image: url(/image/close-fill.svg);
+//                                     background-image: url(./image/close-fill.svg);
 //                                     background-size: contain;
 //                                     height: 24px;
 //                                     width: 24px;
@@ -778,7 +778,7 @@ body {
 //                             .star-img {
 //                                 width: 20px;
 //                                 height: 20px;
-//                                 background-image: url(/image/iconmonstr-star-filled.svg);
+//                                 background-image: url(./image/iconmonstr-star-filled.svg);
 //                                 background-size: cover;
 //                                 background-position: center center;
 //                                 margin-right: 10px;
@@ -802,7 +802,7 @@ body {
 //                         }
 
 //                         input:checked+.star-btn>.star-img {
-//                             background-image: url(/image/iconmonstr-star-filled-white-01.svg);
+//                             background-image: url(./image/iconmonstr-star-filled-white-01.svg);
 //                         }
 
 //                         input:checked+.star-btn>.star-text>.star-number {
@@ -874,7 +874,7 @@ body {
 //                     border-radius: 30px;
 //                     border: 1.5px solid $brand-gray;
 //                     background-color: $brand-lightgray;
-//                     background-image: url(/image/search-line.svg);
+//                     background-image: url(./image/search-line.svg);
 //                     background-repeat: no-repeat;
 //                     background-position: 15px center;
 //                     transform-origin: 50% 50%;
@@ -897,7 +897,7 @@ body {
 
 //                     &::-webkit-search-cancel-button {
 //                         appearance: none;
-//                         background-image: url(/image/close-fill.svg);
+//                         background-image: url(./image/close-fill.svg);
 //                         background-size: contain;
 //                         height: 24px;
 //                         width: 24px;
@@ -1005,7 +1005,7 @@ body {
 
 //     .home-bg-1 {
 //         position: absolute;
-//         background-image: url(/image/background_1.png);
+//         background-image: url(./image/background_1.png);
 //         width: 100%;
 //         height: 280px;
 //         top: 80%;
@@ -1028,7 +1028,7 @@ body {
         &::after {
             content: '';
             display: block;
-            background-image: url(/image/dot.svg);
+            background-image: url(./image/dot.svg);
             background-size: contain;
             width: 100%;
             height: 100%;
@@ -1061,7 +1061,7 @@ body {
 
     &::after {
         content: '';
-        background-image: url(/image/light_gold.svg);
+        background-image: url(./image/light_gold.svg);
         width: 100%;
         height: 80px;
         background-size: contain;
@@ -1075,7 +1075,7 @@ body {
 .h-t-c-i-map {
     &::before {
         content: '';
-        background-image: url(/image/brand-icon-map.svg);
+        background-image: url(./image/brand-icon-map.svg);
         width: 30px;
         height: 30px;
         background-size: contain;
@@ -1090,7 +1090,7 @@ body {
 .h-t-c-i-food {
     &::before {
         content: '';
-        background-image: url(/image/brand-icon-food.svg);
+        background-image: url(./image/brand-icon-food.svg);
         width: 30px;
         height: 30px;
         background-size: contain;
@@ -1119,7 +1119,7 @@ body {
     }
 
     .cloud-1 {
-        background-image: url(/image/clous-1.svg);
+        background-image: url(./image/clous-1.svg);
         height: 50px;
         top: 20%;
         left: 10%;
@@ -1131,7 +1131,7 @@ body {
     }
 
     .cloud-2 {
-        background-image: url(/image/cloud-2.svg);
+        background-image: url(./image/cloud-2.svg);
         height: 32px;
         top: 45%;
         left: 20%;
@@ -1143,7 +1143,7 @@ body {
     }
 
     .cloud-3 {
-        background-image: url(/image/cloud-3.svg);
+        background-image: url(./image/cloud-3.svg);
         height: 60px;
         top: 8%;
         left: 80%;
@@ -1242,23 +1242,23 @@ body {
     }
 
     #t-c-img-1 {
-        background-image: url(/image/taipei-city.jpg);
+        background-image: url(./image/taipei-city.jpg);
     }
 
     #t-c-img-2 {
-        background-image: url(/image/tainan-city.jpg);
+        background-image: url(./image/tainan-city.jpg);
     }
 
     #t-c-img-3 {
-        background-image: url(/image/taichung-city.jpg);
+        background-image: url(./image/taichung-city.jpg);
     }
 
     #t-c-img-4 {
-        background-image: url(/image/newtaipei-city.jpg);
+        background-image: url(./image/newtaipei-city.jpg);
     }
 
     #t-c-img-5 {
-        background-image: url(/image/kaohsiung-city.jpg);
+        background-image: url(./image/kaohsiung-city.jpg);
     }
 
 
@@ -1360,7 +1360,7 @@ body {
     .r-food-img {
         width: 250px;
         height: 280px;
-        // background-image: url(/image/r-food-1.jpg);
+        // background-image: url(./image/r-food-1.jpg);
         // background-size: cover;
         // background-repeat: no-repeat;
         // background-position: center center;
@@ -1401,7 +1401,7 @@ body {
         .r-food-content-box {
             position: absolute;
             bottom: 0;
-            background-image: url(/image/pocket.svg);
+            background-image: url(./image/pocket.svg);
             width: 100%;
             height: 100%;
             background-repeat: no-repeat;
@@ -1455,7 +1455,7 @@ body {
 
                 &::before {
                     content: '';
-                    background-image: url(/image/iconmonstr-star-gold.svg);
+                    background-image: url(./image/iconmonstr-star-gold.svg);
                     width: 20px;
                     height: 20px;
                     background-size: cover;
@@ -1527,7 +1527,7 @@ body {
         }
 
         &:hover .a-t-area {
-            background-image: url(/image/gold-pot.svg);
+            background-image: url(./image/gold-pot.svg);
         }
     }
 
@@ -1606,7 +1606,7 @@ body {
         flex-direction: column;
         justify-content: flex-end;
         align-items: center;
-        background-image: url(/image/pot.svg);
+        background-image: url(./image/pot.svg);
         width: 100%;
         height: 155px;
         background-size: contain;
