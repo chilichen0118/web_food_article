@@ -109,7 +109,7 @@
 
 .food-shop-info .shop-info-top .f-s-logo {
   background-color: #ffc700;
-  background-image: url(/image/account.png);
+  background-image: url(../image/account.png);
   width: 80px;
   height: 80px;
   border-radius: 50%;
@@ -188,7 +188,7 @@
 
 .food-shop-info .shop-info-top .f-s-other .f-s-star .f-s-star-icon::before {
   content: '';
-  background-image: url(/image/iconmonstr-star-gold.svg);
+  background-image: url(../image/iconmonstr-star-gold.svg);
   width: 20px;
   height: 20px;
   background-size: cover;
@@ -298,20 +298,20 @@
 }
 
 .food-shop-info .shop-info-center .tel-icon::after {
-  background-image: url(/image/call.svg);
+  background-image: url(../image/call.svg);
 }
 
 .food-shop-info .shop-info-center .time-icon::after {
-  background-image: url(/image/time.svg);
+  background-image: url(../image/time.svg);
 }
 
 .food-shop-info .shop-info-center .add-icon::after {
-  background-image: url(/image/icon-map.svg);
+  background-image: url(../image/icon-map.svg);
   background-size: contain;
 }
 
 .food-shop-info .shop-info-center .web-icon {
-  background-image: url(/image/iconmonstr-globe-7.svg);
+  background-image: url(../image/iconmonstr-globe-7.svg);
   background-size: contain;
 }
 
@@ -410,11 +410,11 @@
 }
 
 .food-shop-info .shop-info-center .fast-content-1 {
-  background-image: url(/image/foodpanda-logo.svg);
+  background-image: url(../image/foodpanda-logo.svg);
 }
 
 .food-shop-info .shop-info-center .fast-content-2 {
-  background-image: url(/image/ubereat-logo.svg);
+  background-image: url(../image/ubereat-logo.svg);
 }
 
 .food-shop-detail {
@@ -648,15 +648,15 @@
 }
 
 .food-shop-detail #s-d-area-one .d-one .d-one-content .d-tel-img::before {
-  background-image: url(/image/call.svg);
+  background-image: url(../image/call.svg);
 }
 
 .food-shop-detail #s-d-area-one .d-one .d-one-content .d-time-img::before {
-  background-image: url(/image/time.svg);
+  background-image: url(../image/time.svg);
 }
 
 .food-shop-detail #s-d-area-one .d-one .d-one-content .d-add-img::before {
-  background-image: url(/image/icon-map.svg);
+  background-image: url(../image/icon-map.svg);
   background-size: contain;
 }
 
@@ -747,7 +747,7 @@
 
 .food-shop-detail .d-title::before, .food-shop-detail .d-title::after {
   content: '';
-  background-image: url(/image/dot.svg);
+  background-image: url(../image/dot.svg);
   width: 20px;
   height: 20px;
   margin-right: 15px;
@@ -988,7 +988,7 @@
 
 .food-shop-detail .d-six-content .d-six-star .d-s-star-icon::before {
   content: '';
-  background-image: url(/image/iconmonstr-star-gold.svg);
+  background-image: url(../image/iconmonstr-star-gold.svg);
   display: block;
   width: 30px;
   height: 30px;
@@ -1136,7 +1136,7 @@
 
 .food-shop-detail .writer-area .w-card-content .writer-comment .w-comment-icon::after {
   content: '';
-  background-image: url(/image/iconmonstr-star-filled.svg);
+  background-image: url(../image/iconmonstr-star-filled.svg);
   display: block;
   width: 16px;
   height: 16px;

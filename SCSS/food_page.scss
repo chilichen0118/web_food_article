@@ -10,7 +10,7 @@ $mobile: 767px;
 
 .food-bigimg {
     // background-color: $brand-lightgold;
-    // background-image: url(/image/r-food-1.jpg);
+    // background-image: url(../image/r-food-1.jpg);
     width: 100%;
     height: 500px;
     padding: 0;
@@ -80,7 +80,7 @@ $mobile: 767px;
 
         .f-s-logo {
             background-color: $brand-gold;
-            background-image: url(/image/account.png);
+            background-image: url(../image/account.png);
             width: 80px;
             height: 80px;
             border-radius: 50%;
@@ -149,7 +149,7 @@ $mobile: 767px;
 
                     &::before {
                         content: '';
-                        background-image: url(/image/iconmonstr-star-gold.svg);
+                        background-image: url(../image/iconmonstr-star-gold.svg);
                         width: 20px;
                         height: 20px;
                         background-size: cover;
@@ -241,20 +241,20 @@ $mobile: 767px;
         }
 
         .tel-icon::after {
-            background-image: url(/image/call.svg);
+            background-image: url(../image/call.svg);
         }
 
         .time-icon::after {
-            background-image: url(/image/time.svg);
+            background-image: url(../image/time.svg);
         }
 
         .add-icon::after {
-            background-image: url(/image/icon-map.svg);
+            background-image: url(../image/icon-map.svg);
             background-size: contain;
         }
 
         .web-icon {
-            background-image: url(/image/iconmonstr-globe-7.svg);
+            background-image: url(../image/iconmonstr-globe-7.svg);
             background-size: contain;
         }
 
@@ -344,11 +344,11 @@ $mobile: 767px;
         }
 
         .fast-content-1 {
-            background-image: url(/image/foodpanda-logo.svg);
+            background-image: url(../image/foodpanda-logo.svg);
         }
 
         .fast-content-2 {
-            background-image: url(/image/ubereat-logo.svg);
+            background-image: url(../image/ubereat-logo.svg);
         }
     }
 
@@ -544,15 +544,15 @@ $mobile: 767px;
                 }
 
                 .d-tel-img::before {
-                    background-image: url(/image/call.svg);
+                    background-image: url(../image/call.svg);
                 }
 
                 .d-time-img::before {
-                    background-image: url(/image/time.svg);
+                    background-image: url(../image/time.svg);
                 }
 
                 .d-add-img::before {
-                    background-image: url(/image/icon-map.svg);
+                    background-image: url(../image/icon-map.svg);
                     background-size: contain;
                 }
 
@@ -634,7 +634,7 @@ $mobile: 767px;
         &::before,
         &::after {
             content: '';
-            background-image: url(/image/dot.svg);
+            background-image: url(../image/dot.svg);
             width: 20px;
             height: 20px;
             margin-right: 15px;
@@ -800,7 +800,7 @@ $mobile: 767px;
 
             .d-s-star-icon::before {
                 content: '';
-                background-image: url(/image/iconmonstr-star-gold.svg);
+                background-image: url(../image/iconmonstr-star-gold.svg);
                 display: block;
                 width: 30px;
                 height: 30px;
@@ -911,7 +911,7 @@ $mobile: 767px;
 
                 .w-comment-icon::after {
                     content: '';
-                    background-image: url(/image/iconmonstr-star-filled.svg);
+                    background-image: url(../image/iconmonstr-star-filled.svg);
                     display: block;
                     width: 16px;
                     height: 16px;

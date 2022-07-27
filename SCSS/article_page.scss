@@ -45,7 +45,7 @@ $mobile: 767px;
 
         .l-w-img {
             background-color: $brand-gold;
-            background-image: url(/image/account.png);
+            background-image: url(../image/account.png);
             background-size: cover;
             background-repeat: no-repeat;
             border-radius: 50%;
@@ -295,7 +295,7 @@ $mobile: 767px;
         .a-o-v-img::before {
             content: '';
             display: block;
-            background-image: url(/image/eye-outline.svg);
+            background-image: url(../image/eye-outline.svg);
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
@@ -338,17 +338,17 @@ $mobile: 767px;
 
         .a-o-i-heart::before {
             content: '';
-            background-image: url(/image/heart.svg);
+            background-image: url(../image/heart.svg);
         }
 
         .a-o-i-share::before {
             content: '';
-            background-image: url(/image/share-outline.svg);
+            background-image: url(../image/share-outline.svg);
         }
 
         .a-o-i-keep::before {
             content: '';
-            background-image: url(/image/bookmark-outline.svg);
+            background-image: url(../image/bookmark-outline.svg);
         }
     }
 
