@@ -60,7 +60,7 @@ $mobile: 767px;
         border-radius: 30px;
         border: 1.5px solid $brand-gray;
         background-color: $brand-lightgray;
-        background-image: url(/image/search-line.svg);
+        background-image: url(../image/search-line.svg);
         background-repeat: no-repeat;
         background-position: 15px center;
         transform-origin: 50% 50%;
@@ -87,7 +87,7 @@ $mobile: 767px;
 
         &::-webkit-search-cancel-button {
             appearance: none;
-            background-image: url(/image/close-fill.svg);
+            background-image: url(../image/close-fill.svg);
             background-size: contain;
             height: 24px;
             width: 24px;
@@ -335,7 +335,7 @@ $mobile: 767px;
         .v-f-s-img {
             width: 50px;
             height: 50px;
-            background-image: url(/image/special.svg);
+            background-image: url(../image/special.svg);
             background-repeat: no-repeat;
             background-position: center;
             background-size: contain;
@@ -595,7 +595,7 @@ $mobile: 767px;
 
             // .more-img-one,
             // .more-img-three {
-            //     background-image: url(/image/article-card-2.jpg);
+            //     background-image: url(../image/article-card-2.jpg);
             //     background-repeat: no-repeat;
             //     background-size: cover;
             //     height: 50px;
@@ -604,7 +604,7 @@ $mobile: 767px;
 
             // .more-img-two,
             // .more-img-fore {
-            //     background-image: url(/image/article-card-1.jpg);
+            //     background-image: url(../image/article-card-1.jpg);
             //     background-repeat: no-repeat;
             //     background-size: cover;
             //     height: 50px;
@@ -629,43 +629,43 @@ $mobile: 767px;
     }
 
     #f_card_1 {
-        background-image: url(/image/food-bigimg-1.jpg);
+        background-image: url(../image/food-bigimg-1.jpg);
     }
 
     #f_card_2 {
-        background-image: url(/image/d-five-bigimg-d1.jpg);
+        background-image: url(../image/d-five-bigimg-d1.jpg);
     }
 
     #f_card_3 {
-        background-image: url(/image/d-three-img-c1.jpg);
+        background-image: url(../image/d-three-img-c1.jpg);
     }
 
     #f_card_4 {
-        background-image: url(/image/d-three-img-f1.jpg);
+        background-image: url(../image/d-three-img-f1.jpg);
     }
 
     #f_card_5 {
-        background-image: url(/image/d-three-img-g4.jpg);
+        background-image: url(../image/d-three-img-g4.jpg);
     }
 
     #f_card_6 {
-        background-image: url(/image/d-three-img-e2.jpg);
+        background-image: url(../image/d-three-img-e2.jpg);
     }
 
     #f_card_7 {
-        background-image: url(/image/more-img-g2.jpg);
+        background-image: url(../image/more-img-g2.jpg);
     }
 
     #f_card_8 {
-        background-image: url(/image/d-three-img-h2.jpg);
+        background-image: url(../image/d-three-img-h2.jpg);
     }
 
     #f_card_9 {
-        background-image: url(/image/d-three-img-i3.jpg);
+        background-image: url(../image/d-three-img-i3.jpg);
     }
 
     #f_card_10 {
-        background-image: url(/image/d-three-img-j1.jpg);
+        background-image: url(../image/d-three-img-j1.jpg);
     }
 
     .v-f-card-text {
@@ -698,7 +698,7 @@ $mobile: 767px;
             .c-icon {
                 width: 20px;
                 height: 20px;
-                background-image: url(/image/icon-map.svg);
+                background-image: url(../image/icon-map.svg);
                 background-size: contain;
                 background-repeat: no-repeat;
                 margin-right: 5px;
@@ -828,7 +828,7 @@ $mobile: 767px;
             }
 
             .fast-one {
-                background-image: url(/image/foodpanda-logo.svg);
+                background-image: url(../image/foodpanda-logo.svg);
                 width: 80px;
                 height: 20px;
                 background-repeat: no-repeat;
@@ -838,7 +838,7 @@ $mobile: 767px;
             }
 
             .fast-two {
-                background-image: url(/image/ubereat-logo.svg);
+                background-image: url(../image/ubereat-logo.svg);
                 width: 80px;
                 height: 20px;
                 background-repeat: no-repeat;

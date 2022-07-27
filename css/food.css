@@ -71,7 +71,7 @@
   border-radius: 30px;
   border: 1.5px solid #e2e2e2;
   background-color: #fbfbfb;
-  background-image: url(/image/search-line.svg);
+  background-image: url(../image/search-line.svg);
   background-repeat: no-repeat;
   background-position: 15px center;
   -webkit-transform-origin: 50% 50%;
@@ -144,7 +144,7 @@
 .search-food-input #s_f_input_two::-webkit-search-cancel-button {
   -webkit-appearance: none;
           appearance: none;
-  background-image: url(/image/close-fill.svg);
+  background-image: url(../image/close-fill.svg);
   background-size: contain;
   height: 24px;
   width: 24px;
@@ -447,7 +447,7 @@
 .v-f-special .v-f-s-left .v-f-s-img {
   width: 50px;
   height: 50px;
-  background-image: url(/image/special.svg);
+  background-image: url(../image/special.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -793,43 +793,43 @@
 }
 
 .v-f-card #f_card_1 {
-  background-image: url(/image/food-bigimg-1.jpg);
+  background-image: url(../image/food-bigimg-1.jpg);
 }
 
 .v-f-card #f_card_2 {
-  background-image: url(/image/d-five-bigimg-d1.jpg);
+  background-image: url(../image/d-five-bigimg-d1.jpg);
 }
 
 .v-f-card #f_card_3 {
-  background-image: url(/image/d-three-img-c1.jpg);
+  background-image: url(../image/d-three-img-c1.jpg);
 }
 
 .v-f-card #f_card_4 {
-  background-image: url(/image/d-three-img-f1.jpg);
+  background-image: url(../image/d-three-img-f1.jpg);
 }
 
 .v-f-card #f_card_5 {
-  background-image: url(/image/d-three-img-g4.jpg);
+  background-image: url(../image/d-three-img-g4.jpg);
 }
 
 .v-f-card #f_card_6 {
-  background-image: url(/image/d-three-img-e2.jpg);
+  background-image: url(../image/d-three-img-e2.jpg);
 }
 
 .v-f-card #f_card_7 {
-  background-image: url(/image/more-img-g2.jpg);
+  background-image: url(../image/more-img-g2.jpg);
 }
 
 .v-f-card #f_card_8 {
-  background-image: url(/image/d-three-img-h2.jpg);
+  background-image: url(../image/d-three-img-h2.jpg);
 }
 
 .v-f-card #f_card_9 {
-  background-image: url(/image/d-three-img-i3.jpg);
+  background-image: url(../image/d-three-img-i3.jpg);
 }
 
 .v-f-card #f_card_10 {
-  background-image: url(/image/d-three-img-j1.jpg);
+  background-image: url(../image/d-three-img-j1.jpg);
 }
 
 .v-f-card .v-f-card-text {
@@ -888,7 +888,7 @@
 .v-f-card .v-f-card-text .f-c-t-city .c-icon {
   width: 20px;
   height: 20px;
-  background-image: url(/image/icon-map.svg);
+  background-image: url(../image/icon-map.svg);
   background-size: contain;
   background-repeat: no-repeat;
   margin-right: 5px;
@@ -1044,7 +1044,7 @@
 }
 
 .v-f-card .v-f-card-text .f-c-t-fast .fast-one {
-  background-image: url(/image/foodpanda-logo.svg);
+  background-image: url(../image/foodpanda-logo.svg);
   width: 80px;
   height: 20px;
   background-repeat: no-repeat;
@@ -1054,7 +1054,7 @@
 }
 
 .v-f-card .v-f-card-text .f-c-t-fast .fast-two {
-  background-image: url(/image/ubereat-logo.svg);
+  background-image: url(../image/ubereat-logo.svg);
   width: 80px;
   height: 20px;
   background-repeat: no-repeat;

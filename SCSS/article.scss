@@ -60,7 +60,7 @@ $mobile: 767px;
         border-radius: 30px;
         border: 1.5px solid $brand-gray;
         background-color: $brand-lightgray;
-        background-image: url(/image/search-line.svg);
+        background-image: url(../image/search-line.svg);
         background-repeat: no-repeat;
         background-position: 15px center;
         transform-origin: 50% 50%;
@@ -87,7 +87,7 @@ $mobile: 767px;
 
         &::-webkit-search-cancel-button {
             appearance: none;
-            background-image: url(/image/close-fill.svg);
+            background-image: url(../image/close-fill.svg);
             background-size: contain;
             height: 24px;
             width: 24px;
@@ -579,7 +579,7 @@ $mobile: 767px;
             .t-icon {
                 margin-right: 10px;
                 content: "";
-                background-image: url(/iconimage/iconmonstr-time-2.svg);
+                background-image: url(../iconimage/iconmonstr-time-2.svg);
                 background-repeat: no-repeat;
                 background-size: cover;
                 width: 12px;
@@ -641,7 +641,7 @@ $mobile: 767px;
             display: block;
             margin-right: 10px;
             content: "";
-            background-image: url(/image/account.png);
+            background-image: url(../image/account.png);
             width: 24px;
             height: 24px;
             background-size: contain;
