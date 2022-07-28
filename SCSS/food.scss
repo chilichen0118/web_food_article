@@ -814,11 +814,11 @@ $mobile: 767px;
 
             .fast-comment {
                 display: none;
+                font-size: 14px;
+                letter-spacing: 1px;
 
                 &::after {
-                    content: '321則評論';
-                    font-size: 14px;
-                    letter-spacing: 1px;
+                    content: '則評論';
                 }
 
                 @media screen and(max-width: $mobile) {

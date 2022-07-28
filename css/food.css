@@ -1023,12 +1023,12 @@
 
 .v-f-card .v-f-card-text .f-c-t-fast .fast-comment {
   display: none;
+  font-size: 14px;
+  letter-spacing: 1px;
 }
 
 .v-f-card .v-f-card-text .f-c-t-fast .fast-comment::after {
-  content: '321則評論';
-  font-size: 14px;
-  letter-spacing: 1px;
+  content: '則評論';
 }
 
 @media screen and (max-width: 767px) {
