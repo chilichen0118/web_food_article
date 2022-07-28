@@ -368,7 +368,8 @@ header {
         }
     }
 
-    .nav-food-item,.nav-article-item {
+    .nav-food-item,
+    .nav-article-item {
         margin: 15px 0 5px;
 
         .member-link-img::before {
@@ -434,6 +435,91 @@ header {
     background-color: #fff;
 
 }
+
+// 小可愛註冊按鈕
+
+.cute-btn {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    bottom: calc(10% + 70px);
+    right: calc(5% - 30px);;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 50;
+
+    &:hover .c-btn-text {
+        opacity: 1;
+    }
+
+    @media screen and(max-width: $mobile) {
+        right: calc(5% - 20px);
+        bottom: calc(10% + 60px);
+    }
+
+    .c-btn-text {
+        color: $brand-red;
+        letter-spacing: 1.5px;
+        font-weight: 500;
+        opacity: 0;
+        transition: .3s all;
+
+        @media screen and(max-width: $mobile) {
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        span {
+            color: $brand-red;
+            display: inline-block;
+            font-size: 14px;
+            font-weight: 500;
+            transform-origin: center center;
+
+
+            @media screen and(max-width: $mobile) {
+                font-size: 12px;
+            }
+        }
+
+        .c-b-t-line:first-child {
+            transform: rotate(-15deg);
+            transform-origin: center center;
+            padding-right: 10px;
+
+            @media screen and(max-width: $mobile) {
+                padding-right: 8px;
+            }
+        }
+
+        .c-b-t-line:last-child {
+            transform: rotate(15deg);
+            transform-origin: center center;
+            padding-left: 10px;
+
+            @media screen and(max-width: $mobile) {
+                padding-left: 8px;
+            }
+        }
+    }
+
+    .c-btn-img::after {
+        content: url(../image/cute-signup-btn.svg);
+        display: block;
+        width: 120px;
+        height: 120px;
+        margin: 0 auto;
+
+        @media screen and(max-width: $mobile) {
+            width: 100px;
+            height: 100px;
+        }
+    }
+}
+
+
+// top btn
 
 .back-btn {
     position: fixed;

@@ -16,7 +16,7 @@ body {
 .home-group {
     height: 100vh;
     transform: translateY(-100px);
-
+   
     @media screen and(max-width: $mobile) {
         height: fit-content;
         align-items: flex-start;
@@ -32,6 +32,7 @@ body {
     align-items: center;
     justify-content: center;
 }
+
 
 .home-search {
     position: relative;
@@ -52,8 +53,8 @@ body {
         z-index: -1;
 
         @media screen and(max-width: $mobile) {
-            transform: translateY(0%);
-            height: 120%;
+            transform: translateY(10%);
+            height: 100%;
         }
     }
 }
@@ -63,8 +64,9 @@ body {
     padding: 30px 50px;
 
     @media screen and(max-width: $mobile) {
-        width: 100%;
+        width: 95%;
         transform: translateY(20%);
+        padding: 30px 15px;
     }
 
 
@@ -86,6 +88,11 @@ body {
         align-items: center;
         text-align: center;
         padding: 10px 15px;
+
+        @media screen and(max-width: $mobile) {
+            padding-top: 0;
+            padding-bottom: 5px;
+        }
 
         #search-food {
             padding-right: 50px;
@@ -111,7 +118,7 @@ body {
                 text-align: center;
 
                 @media screen and(max-width: $mobile) {
-                    padding: 10px 15px;
+                    padding: 8px 12px;
                     font-size: 16px;
                 }
             }
@@ -127,6 +134,13 @@ body {
 
     // 搜好食 & 找心路 內容
     #search_content {
+
+        @media screen and(max-width: $mobile) {
+            width: 75%;
+            margin: 0 auto;
+        }
+
+        
         .search-text {
             display: flex;
             flex-direction: row;
@@ -136,8 +150,7 @@ body {
             padding: 20px 15px;
 
             @media screen and(max-width: $mobile) {
-                padding-top: 10px;
-                padding-bottom: 10px;
+                padding: 5px 0 10px;
             }
 
             .s-t-food,
@@ -364,8 +377,8 @@ body {
                 @media screen and(max-width: $mobile) {
                     max-width: 150px;
                     font-size: 16px;
-                    padding: 15px 15px;
-                    min-width: 200px;
+                    padding: 10px 15px;
+                    min-width: 180px;
                 }
 
 
@@ -382,6 +395,30 @@ body {
     visibility: hidden;
 }
 
+.search-bottom-img {
+    width: 100%;
+    height: fit-content;
+    position: relative;
+    
+
+    &::after {
+        content: '';
+        background-image: url(../image/background_1.png);
+        display: block;
+        width: 100%;
+        height: 300px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        position: absolute;
+        transform: translateY(-300px);
+
+        @media screen and(max-width: $mobile) {
+            height: 100px;
+            transform: translateY(-50%);
+        }
+    }
+}
 
 // .home-group {
 
@@ -1119,7 +1156,7 @@ body {
     }
 
     .cloud-1 {
-        background-image: url(../image/clous-1.svg);
+        background-image: url(../image/cloud-1.svg);
         height: 50px;
         top: 20%;
         left: 10%;

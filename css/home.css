@@ -62,9 +62,9 @@ body {
 
 @media screen and (max-width: 767px) {
   .home-search::before {
-    -webkit-transform: translateY(0%);
-            transform: translateY(0%);
-    height: 120%;
+    -webkit-transform: translateY(10%);
+            transform: translateY(10%);
+    height: 100%;
   }
 }
 
@@ -75,9 +75,10 @@ body {
 
 @media screen and (max-width: 767px) {
   .search {
-    width: 100%;
+    width: 95%;
     -webkit-transform: translateY(20%);
             transform: translateY(20%);
+    padding: 30px 15px;
   }
 }
 
@@ -109,6 +110,13 @@ body {
   padding: 10px 15px;
 }
 
+@media screen and (max-width: 767px) {
+  .search .search-title {
+    padding-top: 0;
+    padding-bottom: 5px;
+  }
+}
+
 .search .search-title #search-food {
   padding-right: 50px;
 }
@@ -137,7 +145,7 @@ body {
 
 @media screen and (max-width: 767px) {
   .search .search-title .s-t-btn .search-options {
-    padding: 10px 15px;
+    padding: 8px 12px;
     font-size: 16px;
   }
 }
@@ -147,6 +155,13 @@ body {
   background-color: #ffc700;
   border: 1px solid #ffc700;
   font-weight: 500;
+}
+
+@media screen and (max-width: 767px) {
+  .search #search_content {
+    width: 75%;
+    margin: 0 auto;
+  }
 }
 
 .search #search_content .search-text {
@@ -169,8 +184,7 @@ body {
 
 @media screen and (max-width: 767px) {
   .search #search_content .search-text {
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding: 5px 0 10px;
   }
 }
 
@@ -465,8 +479,8 @@ body {
   .search #search_content .search-big-btn input[type="submit"] {
     max-width: 150px;
     font-size: 16px;
-    padding: 15px 15px;
-    min-width: 200px;
+    padding: 10px 15px;
+    min-width: 180px;
   }
 }
 
@@ -479,6 +493,36 @@ body {
 
 .s-t-hide {
   visibility: hidden;
+}
+
+.search-bottom-img {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  position: relative;
+}
+
+.search-bottom-img::after {
+  content: '';
+  background-image: url(../image/background_1.png);
+  display: block;
+  width: 100%;
+  height: 300px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  -webkit-transform: translateY(-300px);
+          transform: translateY(-300px);
+}
+
+@media screen and (max-width: 767px) {
+  .search-bottom-img::after {
+    height: 100px;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
 }
 
 .home-title-area .b-dot {
@@ -582,7 +626,7 @@ body {
 }
 
 .cloud-area .cloud-1 {
-  background-image: url(../image/clous-1.svg);
+  background-image: url(../image/cloud-1.svg);
   height: 50px;
   top: 20%;
   left: 10%;

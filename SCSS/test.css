@@ -42,9 +42,14 @@ body {
   position: relative;
 }
 
-.home-search::before {
+.search {
+  width: 80%;
+  padding: 30px 50px;
+}
+
+.search::before {
   content: '';
-  background-image: url(/image/search_background.svg);
+  background-image: url(../image/search_background.svg);
   width: 100%;
   height: 150%;
   background-size: contain;
@@ -61,16 +66,11 @@ body {
 }
 
 @media screen and (max-width: 767px) {
-  .home-search::before {
-    -webkit-transform: translateY(0%);
-            transform: translateY(0%);
-    height: 120%;
+  .search::before {
+    -webkit-transform: translateY(10%);
+            transform: translateY(10%);
+    height: 100%;
   }
-}
-
-.search {
-  width: 80%;
-  padding: 30px 50px;
 }
 
 @media screen and (max-width: 767px) {
@@ -78,6 +78,7 @@ body {
     width: 100%;
     -webkit-transform: translateY(20%);
             transform: translateY(20%);
+    padding: 30px;
   }
 }
 
@@ -109,6 +110,13 @@ body {
   padding: 10px 15px;
 }
 
+@media screen and (max-width: 767px) {
+  .search .search-title {
+    padding-top: 0;
+    padding-bottom: 5px;
+  }
+}
+
 .search .search-title #search-food {
   padding-right: 50px;
 }
@@ -137,7 +145,7 @@ body {
 
 @media screen and (max-width: 767px) {
   .search .search-title .s-t-btn .search-options {
-    padding: 10px 15px;
+    padding: 8px 12px;
     font-size: 16px;
   }
 }
@@ -169,7 +177,7 @@ body {
 
 @media screen and (max-width: 767px) {
   .search #search_content .search-text {
-    padding-top: 10px;
+    padding-top: 5px;
     padding-bottom: 10px;
   }
 }
@@ -214,6 +222,7 @@ body {
 .search #search_content .search-text input:-webkit-autofill:active {
   -webkit-text-fill-color: #303030;
   -webkit-box-shadow: 0 0 0 1000px rgba(255, 255, 255, 0) inset;
+          box-shadow: 0 0 0 1000px rgba(255, 255, 255, 0) inset;
   -webkit-transition: background-color 5000s ease-in-out 0s;
   transition: background-color 5000s ease-in-out 0s;
 }
@@ -228,7 +237,7 @@ body {
   border-radius: 30px;
   border: 1.5px solid #e2e2e2;
   background-color: #fbfbfb;
-  background-image: url(/image/search-line.svg);
+  background-image: url(../image/search-line.svg);
   background-repeat: no-repeat;
   background-position: 15px center;
   -webkit-transform-origin: 50% 50%;
@@ -298,7 +307,7 @@ body {
 .search #search_content .search-text .s-search-style::-webkit-search-cancel-button {
   -webkit-appearance: none;
           appearance: none;
-  background-image: url(/image/close-fill.svg);
+  background-image: url(../image/close-fill.svg);
   background-size: contain;
   height: 24px;
   width: 24px;
@@ -396,7 +405,7 @@ body {
 .search #search_content .s-group .star-btn .star-img {
   width: 20px;
   height: 20px;
-  background-image: url(/image/iconmonstr-star-filled.svg);
+  background-image: url(../image/iconmonstr-star-filled.svg);
   background-size: cover;
   background-position: center center;
   margin-right: 10px;
@@ -416,7 +425,7 @@ body {
 }
 
 .search #search_content .s-group input:checked + .star-btn > .star-img {
-  background-image: url(/image/iconmonstr-star-filled-white-01.svg);
+  background-image: url(../image/iconmonstr-star-filled-white-01.svg);
 }
 
 .search #search_content .s-group input:checked + .star-btn > .star-text > .star-number {
@@ -464,8 +473,8 @@ body {
   .search #search_content .search-big-btn input[type="submit"] {
     max-width: 150px;
     font-size: 16px;
-    padding: 15px 15px;
-    min-width: 200px;
+    padding: 10px 15px;
+    min-width: 180px;
   }
 }
 
@@ -474,6 +483,10 @@ body {
           box-shadow: 5px 5px 10px rgba(255, 199, 0, 0.5);
   -webkit-transform: translate(-8px, -8px);
           transform: translate(-8px, -8px);
+}
+
+.s-t-hide {
+  visibility: hidden;
 }
 
 .home-title-area .b-dot {
@@ -485,7 +498,7 @@ body {
 .home-title-area .b-dot::after {
   content: '';
   display: block;
-  background-image: url(/image/dot.svg);
+  background-image: url(../image/dot.svg);
   background-size: contain;
   width: 100%;
   height: 100%;
@@ -516,7 +529,7 @@ body {
 
 .h-t-c-icon::after {
   content: '';
-  background-image: url(/image/light_gold.svg);
+  background-image: url(../image/light_gold.svg);
   width: 100%;
   height: 80px;
   background-size: contain;
@@ -529,7 +542,7 @@ body {
 
 .h-t-c-i-map::before {
   content: '';
-  background-image: url(/image/brand-icon-map.svg);
+  background-image: url(../image/brand-icon-map.svg);
   width: 30px;
   height: 30px;
   background-size: contain;
@@ -543,7 +556,7 @@ body {
 
 .h-t-c-i-food::before {
   content: '';
-  background-image: url(/image/brand-icon-food.svg);
+  background-image: url(../image/brand-icon-food.svg);
   width: 30px;
   height: 30px;
   background-size: contain;
@@ -577,7 +590,7 @@ body {
 }
 
 .cloud-area .cloud-1 {
-  background-image: url(/image/clous-1.svg);
+  background-image: url(../image/clous-1.svg);
   height: 50px;
   top: 20%;
   left: 10%;
@@ -592,7 +605,7 @@ body {
 }
 
 .cloud-area .cloud-2 {
-  background-image: url(/image/cloud-2.svg);
+  background-image: url(../image/cloud-2.svg);
   height: 32px;
   top: 45%;
   left: 20%;
@@ -607,7 +620,7 @@ body {
 }
 
 .cloud-area .cloud-3 {
-  background-image: url(/image/cloud-3.svg);
+  background-image: url(../image/cloud-3.svg);
   height: 60px;
   top: 8%;
   left: 80%;
@@ -699,7 +712,7 @@ body {
 }
 
 .home-popular-town .text-path {
-  fill: #ffc700;
+  fill: #bc2c1a;
 }
 
 .home-popular-town .t-c-text {
@@ -725,23 +738,23 @@ body {
 }
 
 .home-popular-town #t-c-img-1 {
-  background-image: url(/image/taipei-city.jpg);
+  background-image: url(../image/taipei-city.jpg);
 }
 
 .home-popular-town #t-c-img-2 {
-  background-image: url(/image/tainan-city.jpg);
+  background-image: url(../image/tainan-city.jpg);
 }
 
 .home-popular-town #t-c-img-3 {
-  background-image: url(/image/taichung-city.jpg);
+  background-image: url(../image/taichung-city.jpg);
 }
 
 .home-popular-town #t-c-img-4 {
-  background-image: url(/image/newtaipei-city.jpg);
+  background-image: url(../image/newtaipei-city.jpg);
 }
 
 .home-popular-town #t-c-img-5 {
-  background-image: url(/image/kaohsiung-city.jpg);
+  background-image: url(../image/kaohsiung-city.jpg);
 }
 
 .home-popular-town #dash {
@@ -837,6 +850,12 @@ body {
           transform: translate(0) rotate(0);
 }
 
+.home-recommend-food .recommend-food-box:hover .r-f-score {
+  background-position-x: -150%;
+  -webkit-transition: background-position-x 600ms;
+  transition: background-position-x 600ms;
+}
+
 .home-recommend-food .food-card {
   height: 380px;
   width: 100%;
@@ -855,16 +874,22 @@ body {
 .home-recommend-food .r-food-img {
   width: 250px;
   height: 280px;
-  background-image: url(/image/r-food-1.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
   margin: 0 auto;
   border-radius: 20px;
   -webkit-transform: translate(10px, 90px) rotate(-10deg);
           transform: translate(10px, 90px) rotate(-10deg);
   -webkit-transition: .3s all;
   transition: .3s all;
+}
+
+.home-recommend-food .r-food-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  border-radius: 20px;
 }
 
 @media screen and (max-width: 767px) {
@@ -891,7 +916,7 @@ body {
 .home-recommend-food .r-food-content .r-food-content-box {
   position: absolute;
   bottom: 0;
-  background-image: url(/image/pocket.svg);
+  background-image: url(../image/pocket.svg);
   width: 100%;
   height: 100%;
   background-repeat: no-repeat;
@@ -925,7 +950,7 @@ body {
   font-size: 14px;
 }
 
-.home-recommend-food .r-food-content .r-food-content-box .r-f-score {
+.home-recommend-food .r-food-content .r-f-score {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -949,19 +974,13 @@ body {
   background-size: 200% 100%;
 }
 
-.home-recommend-food .r-food-content .r-food-content-box .r-f-score:hover {
-  background-position-x: -150%;
-  -webkit-transition: background-position-x 600ms;
-  transition: background-position-x 600ms;
-}
-
-.home-recommend-food .r-food-content .r-food-content-box .r-f-score .r-f-star {
+.home-recommend-food .r-food-content .r-f-score .r-f-star {
   margin-right: 10px;
 }
 
-.home-recommend-food .r-food-content .r-food-content-box .r-f-score .r-f-star::before {
+.home-recommend-food .r-food-content .r-f-score .r-f-star::before {
   content: '';
-  background-image: url(/image/iconmonstr-star-gold.svg);
+  background-image: url(../image/iconmonstr-star-gold.svg);
   width: 20px;
   height: 20px;
   background-size: cover;
@@ -969,7 +988,7 @@ body {
   display: block;
 }
 
-.home-recommend-food .r-food-content .r-food-content-box .r-f-score .r-f-number {
+.home-recommend-food .r-food-content .r-f-score .r-f-number {
   letter-spacing: 1.5px;
   font-weight: 500;
   display: inline-block;
@@ -1033,7 +1052,14 @@ body {
 }
 
 .home-recommend-article .recommend-article-box:hover .a-t-area {
-  background-image: url(/image/gold-pot.svg);
+  background-image: url(../image/gold-pot.svg);
+}
+
+@media screen and (max-width: 767px) {
+  .home-recommend-article .recommend-article-box:hover .a-t-area {
+    width: 100%;
+    height: 130px;
+  }
 }
 
 .home-recommend-article .article-card {
@@ -1054,21 +1080,38 @@ body {
 @media screen and (max-width: 767px) {
   .home-recommend-article .article-card {
     padding: 0 10px;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
   }
 }
 
 .home-recommend-article .article-img {
   width: 250px;
   height: 250px;
-  background-image: url(/image/r-article-1.jpg);
-  background-size: cover;
-  background-position: center center;
   border-radius: 50%;
   -webkit-transform: translateY(100px);
           transform: translateY(100px);
   z-index: 1;
   -webkit-transition: .3s ease-out;
   transition: .3s ease-out;
+}
+
+@media screen and (max-width: 767px) {
+  .home-recommend-article .article-img {
+    -webkit-transform: translateY(120px);
+            transform: translateY(120px);
+  }
+}
+
+.home-recommend-article .article-img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  border-radius: 50%;
 }
 
 @media screen and (max-width: 767px) {
@@ -1131,7 +1174,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-image: url(/image/pot.svg);
+  background-image: url(../image/pot.svg);
   width: 100%;
   height: 155px;
   background-size: contain;
@@ -1147,7 +1190,7 @@ body {
 @media screen and (max-width: 767px) {
   .home-recommend-article .a-t-area {
     height: 130px;
-    width: 80%;
+    width: 100%;
   }
 }
 
@@ -1159,6 +1202,12 @@ body {
   font-weight: 500;
   letter-spacing: 2px;
   text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+  .home-recommend-article .a-t-area .a-t-text {
+    width: 80%;
+  }
 }
 
 .home-recommend-article .a-t-area .a-t-date {
