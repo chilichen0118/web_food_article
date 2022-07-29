@@ -14,6 +14,7 @@ $(document).ready(function () {
 //     $("#nav-overlay").css({"margin-top": -radius, "margin-left": -radius});
 // }
 
+// phone menu
 $(document).ready(function() {
     $("#nav-btn").click(function() {
         $("#nav-btn, #nav-overlay, .wrapper").toggleClass("openbox");
@@ -25,9 +26,11 @@ $(document).ready(function() {
 	
 	window.setTimeout(function() {
 		 $("#nav-btn").click();
-	}, 1000)
+	}, 300)
 });
 
+
+// header切換顏色
 $(window).scroll(function(){
     if ($(document).scrollTop()>50) {
         $('.header').addClass('h-change-color');

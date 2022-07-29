@@ -309,7 +309,7 @@ header {
     z-index: -1;
     background: rgba(0, 0, 0, 0.8);
     border-radius: 50%;
-    transition: 1s;
+    transition: .35s;
     transform: scale3d(0, 0, 0);
     background: #fff;
 }
@@ -325,7 +325,7 @@ header {
     position: fixed;
     left: 0;
     top: 0;
-    transition: ease-in-out 0.25s;
+    transition: ease-in-out 0.35s;
     transition-delay: 0s;
     visibility: hidden;
     opacity: 0;
@@ -430,8 +430,8 @@ header {
 .wrapper.openbox {
     visibility: visible;
     opacity: 1;
-    transition: ease-in-out 0.5s;
-    transition-delay: 0.25s;
+    transition: ease-in-out 0.35s;
+    transition-delay: 0.03s;
     background-color: #fff;
 
 }

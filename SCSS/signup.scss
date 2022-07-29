@@ -28,7 +28,7 @@ $mobile: 767px;
         align-items: center;
 
         @media screen and(max-width: $mobile) {
-            background-color: rgba(48,48,48,.05);
+            background-color: rgba(48,48,48,.25);
         }
     }
 
